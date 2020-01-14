@@ -1,6 +1,11 @@
 ﻿#back-image-container {
-    background-image: url("../img/imgfondo.jpg");
+    background-image: url(../img/imgfondo.jpg);
+    background-attachment: fixed;
+    background-color: #cccccc;
     width: auto;
     height: 500px;
-    position: absolute;
+}
+
+#busqueda {
+    
 }

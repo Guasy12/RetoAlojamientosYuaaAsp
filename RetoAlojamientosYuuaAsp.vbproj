@@ -211,10 +211,18 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="src\Alojamientos.aspx" />
     <Content Include="src\Index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Alojamientos.aspx.designer.vb">
+      <DependentUpon>Alojamientos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="src\Alojamientos.aspx.vb">
+      <DependentUpon>Alojamientos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="src\Index.aspx.designer.vb">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
