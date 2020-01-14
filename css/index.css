@@ -1,11 +1,27 @@
-﻿#back-image-container {
+﻿/*#back-image-container {
     background-image: url(../img/imgfondo.jpg);
     background-attachment: fixed;
     background-color: #cccccc;
     width: auto;
-    height: 500px;
-}
+    height: 400px;
+    filter: blur(8px);
+    transform:scale(1.1);
+}*/
 
+/* Position text in the middle of the page/image 
+.filtro-container {
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}*/
 #busqueda {
-    
+    background-color:lightsteelblue;
+    width: auto;
+    height:200px;
 }

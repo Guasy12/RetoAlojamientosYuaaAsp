@@ -9,6 +9,7 @@
     
     <link rel="stylesheet" href="../Content/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="../css/navbar.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/index.css"/>
 
     <script src="../Scripts/jquery-3.0.0.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
