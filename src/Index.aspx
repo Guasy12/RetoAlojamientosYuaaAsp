@@ -8,7 +8,7 @@
     <title>YUUA Alojamientos</title>
     
     <link rel="stylesheet" href="../Content/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/nav.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css"/>
 
     <script src="../Scripts/jquery-3.0.0.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>

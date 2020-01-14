@@ -1,0 +1,6 @@
+﻿#back-image-container {
+    background-image: url("../img/imgfondo.jpg");
+    width: auto;
+    height: 500px;
+    position: absolute;
+}
