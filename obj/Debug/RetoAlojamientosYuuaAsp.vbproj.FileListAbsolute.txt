@@ -58,3 +58,9 @@ C:\WorkspaceRetoYUUA\RetoAlojamientosYuuaAsp\obj\Debug\RetoAlojamientosYuuaAsp.v
 C:\WorkspaceRetoYUUA\RetoAlojamientosYuuaAsp\obj\Debug\RetoAlojamientosYuuaAsp.dll
 C:\WorkspaceRetoYUUA\RetoAlojamientosYuuaAsp\obj\Debug\RetoAlojamientosYuuaAsp.xml
 C:\WorkspaceRetoYUUA\RetoAlojamientosYuuaAsp\obj\Debug\RetoAlojamientosYuuaAsp.pdb
+C:\WorkspaceRetoYUUA\RetoAlojamientosYuuaAsp\bin\MySql.Data.dll
+C:\WorkspaceRetoYUUA\RetoAlojamientosYuuaAsp\bin\Google.Protobuf.dll
+C:\WorkspaceRetoYUUA\RetoAlojamientosYuuaAsp\bin\BouncyCastle.Crypto.dll
+C:\WorkspaceRetoYUUA\RetoAlojamientosYuuaAsp\bin\Ubiety.Dns.Core.dll
+C:\WorkspaceRetoYUUA\RetoAlojamientosYuuaAsp\bin\Renci.SshNet.dll
+C:\WorkspaceRetoYUUA\RetoAlojamientosYuuaAsp\bin\MySql.Data.xml
