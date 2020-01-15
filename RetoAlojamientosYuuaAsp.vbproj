@@ -106,6 +106,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\datepicker.css" />
     <Content Include="css\index.css" />
+    <Content Include="css\login.css" />
     <Content Include="css\navbar.css" />
     <Content Include="img\imgfondo.jpg" />
     <Content Include="img\logo.png" />
@@ -213,6 +214,7 @@
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="src\Alojamientos.aspx" />
     <Content Include="src\Index.aspx" />
+    <Content Include="src\Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -248,6 +250,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="src\Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="src\Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

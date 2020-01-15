@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Alojamientos.aspx.vb" Inherits="RetoAlojamientosYuuaAsp.Alojamientos" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Login.aspx.vb" Inherits="RetoAlojamientosYuuaAsp.Login" %>
 
 <!DOCTYPE html>
 
@@ -9,6 +9,7 @@
     
     <link rel="stylesheet" href="../Content/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="../css/navbar.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/login.css"/>
 
     <script src="../Scripts/jquery-3.0.0.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
@@ -44,6 +45,24 @@
           </div>
         </nav>
         </div>
+
+        <!-- LOGIN -->
+        <div class="box">
+            <h1>Iniciar Sesión</h1>
+
+            <asp:TextBox ID="usuario" runat="server" placeholder="Usuario" class="user"></asp:TextBox>
+            <br />
+            <asp:RequiredFieldValidator ID="userValidator" runat="server" ErrorMessage="Campo usuario vacío" EnableClientScript="False" ControlToValidate="usuario"></asp:RequiredFieldValidator>
+            <br />
+            <asp:TextBox ID="contrasenia" type="password" placeholder="Contraseña" class="password" runat="server"></asp:TextBox><br />
+            <asp:RequiredFieldValidator ID="passValidator" runat="server" ErrorMessage="Campo contraseña vacío" ControlToValidate="contrasenia" EnableClientScript="False"></asp:RequiredFieldValidator>
+            <br />
+            <asp:Button ID="login" runat="server" Text="Iniciar Sesión" class="btn" />
+            <asp:Button ID="registro" runat="server" Text="Registrarse" class="btn2" />
+        </div>
+        <p>¿Olvidaste tu contraseña? <u style="color:#f1c40f;">¡Haz click aquí!</u></p>
+
+
         <div class="footer">
           <img src="../img/logo.png" width="100" alt="" class="d-inline-block align-middle mr-2"/>
         </div>
