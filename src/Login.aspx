@@ -54,7 +54,7 @@
             <br />
             <asp:RequiredFieldValidator ID="userValidator" runat="server" ErrorMessage="Campo usuario vacío" EnableClientScript="False" ControlToValidate="usuario"></asp:RequiredFieldValidator>
             <br />
-            <asp:TextBox ID="contrasenia" type="password" placeholder="Contraseña" class="password" runat="server"></asp:TextBox><br />
+            <asp:TextBox ID="contrasenia" type="password" placeholder="Contraseña" class="textboxGenerico" runat="server"></asp:TextBox><br />
             <asp:RequiredFieldValidator ID="passValidator" runat="server" ErrorMessage="Campo contraseña vacío" ControlToValidate="contrasenia" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
             <asp:Button ID="login" runat="server" Text="Iniciar Sesión" class="btn" />
@@ -62,7 +62,7 @@
         </div>
         <p>¿Olvidaste tu contraseña? <u style="color:#f1c40f;">¡Haz click aquí!</u></p>
 
-
+        <!-- FOOTER -->
         <div class="footer">
           <img src="../img/logo.png" width="100" alt="" class="d-inline-block align-middle mr-2"/>
         </div>
