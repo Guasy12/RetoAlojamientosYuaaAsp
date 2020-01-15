@@ -82,7 +82,7 @@
             <br />
             <asp:RequiredFieldValidator ID="telefonoValidator" runat="server" ErrorMessage="Campo telefono vacío" ControlToValidate="tbTelefono" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
-            <asp:Button ID="registro" runat="server" Text="Registrarse" class="btn2" />
+            <asp:Button ID="registro" runat="server" Text="Registrarse" class="btn3" />
         </div>
 
         <!-- FOOTER -->

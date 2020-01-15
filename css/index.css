@@ -20,8 +20,12 @@
     padding: 20px;
     text-align: center;
 }*/
-#busqueda {
-    background-color:lightsteelblue;
+#busqueda-container {
+    background-color: lightsteelblue;
     width: auto;
-    height:200px;
+    height: 200px;
+}
+#busqueda-contenido {
+    text-align: center;
+    padding-top: 20px;
 }
