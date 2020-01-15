@@ -16,12 +16,13 @@ Public Class Alojamientos
         Dim tipoAloj = UCase(Session("ddlTipoAloj"))
 
 
-        Dim query As New MySqlDataAdapter("SELECT documentname FROM talojamientos aloj WHERE aloj.localizacion_idLocalizacion in " &
+        Dim query As New MySqlDataAdapter("SELECT documentname from talojamientos where UPPER(documentname) like '%" & busqueda & "%' or idAlojamiento in" &
+                                          "(SELECT idAlojamiento FROM talojamientos aloj WHERE aloj.localizacion_idLocalizacion in " &
                                           "(SELECT DISTINCT loc.idLocalizacion FROM tlocalizacion loc, tmunicipio mun, tterritorio ter, tpais pais " &
-                                          "WHERE(Loc.territorycode = (SELECT territorycode FROM tterritorio WHERE UPPER(territory) Like '%" & busqueda & "%')) " &
-                                          "Or (loc.countrycode = (SELECT countrycode FROM tpais WHERE UPPER(country) Like '%" & busqueda & "%')) " &
-                                          "Or (loc.municipalitycode = (SELECT municipalitycode FROM tmunicipio WHERE UPPER(municipality) like '%" & busqueda & "%')))" &
-                                          "And UPPER(lodgingtype) = '" & tipoAloj & "' ", conexion)
+                                          "WHERE(Loc.territorycode in (SELECT territorycode FROM tterritorio WHERE UPPER(territory) Like '%" & busqueda & "%')) " &
+                                          "Or (loc.countrycode in (SELECT countrycode FROM tpais WHERE UPPER(country) Like '%" & busqueda & "%')) " &
+                                          "Or (loc.municipalitycode in (SELECT municipalitycode FROM tmunicipio WHERE UPPER(municipality) like '%" & busqueda & "%')))" &
+                                          "And UPPER(lodgingtype) = '" & tipoAloj & "')", conexion)
 
         Dim campoTexto As New DataTable()
         query.Fill(campoTexto)

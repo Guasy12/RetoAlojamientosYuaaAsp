@@ -12,7 +12,6 @@ Public Class Index
         query.Fill(campoTexto)
         Dim numero As Integer = campoTexto.Rows.Count
 
-        ddlTipoAloj.Items.Add("Alojamiento")
         For i = 0 To campoTexto.Rows.Count - 1
             ddlTipoAloj.Items.Add(campoTexto.Rows(i).Item(0))
         Next

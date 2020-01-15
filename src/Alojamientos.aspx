@@ -43,6 +43,9 @@
           </div>
         </nav>
         </div>
+        <div class="footer">
+          <img src="../img/logo.png" width="100" alt="" class="d-inline-block align-middle mr-2"/>
+        </div>
     </form>
 </body>
 </html>

@@ -62,11 +62,9 @@
             <asp:DropDownList ID="ddlTipoAloj" runat="server" Height="40px" Width="150px">
             </asp:DropDownList>
             <asp:Button ID="btnBuscar" runat="server" Text="BUSCAR" Height="40px" />
-
-            <!-- Label de prueba-->
-            <br /><br />
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-
+        </div>
+        <div class="footer">
+          <img src="../img/logo.png" width="100" alt="" class="d-inline-block align-middle mr-2"/>
         </div>
     </form>
 </body>
