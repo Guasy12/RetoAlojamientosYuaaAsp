@@ -56,12 +56,14 @@
         <div class="box">
             <h1>Iniciar Sesión</h1>
 
-            <asp:TextBox ID="usuario" runat="server" placeholder="Usuario" class="user"></asp:TextBox>
+            <asp:TextBox ID="tbUsuario" runat="server" placeholder="Usuario" class="user"></asp:TextBox>
             <br />
-            <asp:RequiredFieldValidator ID="userValidator" runat="server" ErrorMessage="Campo usuario vacío" EnableClientScript="False" ControlToValidate="usuario"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="userValidator" runat="server" ErrorMessage="Campo usuario vacío" EnableClientScript="False" ControlToValidate="tbUsuario"></asp:RequiredFieldValidator>
             <br />
-            <asp:TextBox ID="contrasenia" type="password" placeholder="Contraseña" class="textboxGenerico" runat="server"></asp:TextBox><br />
-            <asp:RequiredFieldValidator ID="passValidator" runat="server" ErrorMessage="Campo contraseña vacío" ControlToValidate="contrasenia" EnableClientScript="False"></asp:RequiredFieldValidator>
+            <asp:TextBox ID="tbContrasenia" type="password" placeholder="Contraseña" class="textboxGenerico" runat="server"></asp:TextBox><br />
+            <asp:RequiredFieldValidator ID="passValidator" runat="server" ErrorMessage="Campo contraseña vacío" EnableClientScript="False" ControlToValidate="tbContrasenia"></asp:RequiredFieldValidator>
+            <br />
+            <asp:Label ID="errorLogin" runat="server" Text=""></asp:Label>
             <br />
             <asp:Button ID="login" runat="server" Text="Iniciar Sesión" class="btn" />
             <asp:Button ID="registro" runat="server" Text="Registrarse" class="btn2" />

@@ -15,6 +15,11 @@
     <script src="../Scripts/bootstrap.min.js"></script>
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
     <script src="../Scripts/jquery-3.0.0.slim.min.js"></script>
+    <!-- Datepicker -->
+    <link rel="stylesheet" href="../css/datepicker.css" type="text/css"/>
+    <script src="../Scripts/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script src="../Scripts/bootstrap-datepicker.es.js" charset="UTF-8"></script>
+    <script src="../Scripts/MyScripts/myscripts.js"></script> 
 </head>
 <body>
     <form id="form1" runat="server">
@@ -62,34 +67,42 @@
             <br />
             <asp:RequiredFieldValidator ID="userValidator" runat="server" ErrorMessage="Campo usuario vacío" ControlToValidate="tbUsuario" EnableClientScript="False" ></asp:RequiredFieldValidator>
             <br />
+
             <asp:TextBox ID="tbContrasenia" type="password" placeholder="Contraseña" class="textboxGenerico" runat="server"></asp:TextBox>
             <br />
             <asp:RequiredFieldValidator ID="passValidator" runat="server" ErrorMessage="Campo contraseña vacío" ControlToValidate="tbContrasenia" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
+
             <asp:TextBox ID="tbDni" runat="server" placeholder="Dni" class="textboxGenerico"></asp:TextBox>
             <br />
             <asp:RequiredFieldValidator ID="dniValidator" runat="server" ErrorMessage="Campo dni vacío" ControlToValidate="tbDni" EnableClientScript="False" ></asp:RequiredFieldValidator>
             <br />
+
             <asp:TextBox ID="tbNombre" placeholder="Nombre" class="textboxGenerico" runat="server"></asp:TextBox>
             <br />
             <asp:RequiredFieldValidator ID="nombreValidator" runat="server" ErrorMessage="Campo nombre vacío" ControlToValidate="tbNombre" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
+
             <asp:TextBox ID="tbApellidos" placeholder="Apellidos" class="textboxGenerico" runat="server"></asp:TextBox>
             <br />
             <asp:RequiredFieldValidator ID="apellidosValidator" runat="server" ErrorMessage="Campo apellidos vacío" ControlToValidate="tbApellidos" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
+
             <asp:TextBox ID="tbFechaNacimiento" placeholder="Fecha de nacimiento" class="textboxGenerico" runat="server"></asp:TextBox>
             <br />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo fecha vacío" ControlToValidate="tbFechaNacimiento" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
+
             <asp:TextBox ID="tbCorreo" placeholder="Correo" class="textboxGenerico" runat="server"></asp:TextBox>
             <br />
             <asp:RequiredFieldValidator ID="correoValidator" runat="server" ErrorMessage="Campo correo vacío" ControlToValidate="tbCorreo" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
+
             <asp:TextBox ID="tbTelefono" placeholder="Teléfono" class="textboxGenerico" runat="server"></asp:TextBox>
             <br />
             <asp:RequiredFieldValidator ID="telefonoValidator" runat="server" ErrorMessage="Campo telefono vacío" ControlToValidate="tbTelefono" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
+
             <asp:Button ID="registro" runat="server" Text="Registrarse" class="btn3" />
 
         </div>

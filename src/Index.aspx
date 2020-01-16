@@ -66,14 +66,29 @@
                 <asp:Label ID="titulo" runat="server" Text="Busque su lugar de alojamiento" Font-Size="XX-Large"></asp:Label>
                 <br /><br />
                 <asp:TextBox ID="tbBusqueda" runat="server" placeholder="Localidad" Height="40px" Width="250px"></asp:TextBox>
-                <asp:TextBox ID="fechaInicio" runat="server" placeholder="Fecha inicial" Height="40px" Width="150px" ReadOnly="True"></asp:TextBox>
-                <asp:TextBox ID="fechaFin" runat="server" placeholder="Fecha final" Height="40px" Width="150px" ReadOnly="True"></asp:TextBox>
+                <asp:TextBox ID="fechaInicio" runat="server" placeholder="Fecha inicial" Height="40px" Width="150px"></asp:TextBox>
+                <asp:TextBox ID="fechaFin" runat="server" placeholder="Fecha final" Height="40px" Width="150px"></asp:TextBox>
                 <asp:DropDownList ID="ddlTipoAloj" runat="server" Height="40px" Width="150px">
                 </asp:DropDownList>
                 <asp:Button ID="btnBuscar" runat="server" Text="BUSCAR" Height="40px" />
             </div>
         </div>
 
+
+        <div class="blog-card">
+        <div class="meta">
+          <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+        </div>
+        <div class="description">
+          <h1>Learning to Code</h1>
+          <h2>Opening a door to the future</h2>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+          <p class="read-more">
+            <a href="#">Read More</a>
+          </p>
+        </div>
+      </div>
+      
         <!-- FOOTER -->
         <div class="footer">
           <img src="../img/logo.png" width="100" alt="" class="d-inline-block align-middle mr-2"/>

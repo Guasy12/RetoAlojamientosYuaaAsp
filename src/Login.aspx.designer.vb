@@ -41,13 +41,13 @@ Partial Public Class Login
     Protected WithEvents lblLogin2 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Control usuario.
+    '''Control tbUsuario.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents usuario As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents tbUsuario As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Control userValidator.
@@ -59,13 +59,13 @@ Partial Public Class Login
     Protected WithEvents userValidator As Global.System.Web.UI.WebControls.RequiredFieldValidator
     
     '''<summary>
-    '''Control contrasenia.
+    '''Control tbContrasenia.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents contrasenia As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents tbContrasenia As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Control passValidator.
@@ -75,6 +75,15 @@ Partial Public Class Login
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents passValidator As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    
+    '''<summary>
+    '''Control errorLogin.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents errorLogin As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''Control login.

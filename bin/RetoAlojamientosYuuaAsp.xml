@@ -55,6 +55,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:RetoAlojamientosYuuaAsp.Alojamientos._lblLogin2">
+<summary>
+Control lblLogin2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:RetoAlojamientosYuuaAsp.Index._form1">
 <summary>
 Control form1.
@@ -154,9 +163,18 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:RetoAlojamientosYuuaAsp.Login._usuario">
+<member name="F:RetoAlojamientosYuuaAsp.Login._lblLogin2">
 <summary>
-Control usuario.
+Control lblLogin2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:RetoAlojamientosYuuaAsp.Login._tbUsuario">
+<summary>
+Control tbUsuario.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -172,9 +190,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:RetoAlojamientosYuuaAsp.Login._contrasenia">
+<member name="F:RetoAlojamientosYuuaAsp.Login._tbContrasenia">
 <summary>
-Control contrasenia.
+Control tbContrasenia.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -184,6 +202,15 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:RetoAlojamientosYuuaAsp.Login._passValidator">
 <summary>
 Control passValidator.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:RetoAlojamientosYuuaAsp.Login._errorLogin">
+<summary>
+Control errorLogin.
 </summary>
 <remarks>
 Campo generado automáticamente.
