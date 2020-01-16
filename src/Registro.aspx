@@ -36,9 +36,17 @@
                 <li class="nav-item active"><a href="Index.aspx" class="nav-link">Alojamientos <span class="sr-only">(current)</span></a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Reservas</a></li>
                 <li class="nav-item">
+                    
+                    <% if Session("SesionUsuario") Is Nothing Then %>
                     <asp:Label ID="lblLogin" runat="server">
                         <a href="Login.aspx" class="nav-link">Login</a>
                     </asp:Label>
+                    <%else %>
+                    <asp:Label ID="lblLogin2" runat="server">
+                        <a href="#" class="nav-link"><% Response.Write(Session("SesionUsuario")) %></a>
+                    </asp:Label>
+                    <% end if %>
+                    
                 </li>
               </ul>
             </div>
@@ -46,7 +54,7 @@
         </nav>
         </div>
 
-        <!-- LOGIN -->
+        <!-- REGISTRO -->
         <div class="box">
             <h1>Iniciar Sesión</h1>
 
@@ -83,8 +91,8 @@
             <asp:RequiredFieldValidator ID="telefonoValidator" runat="server" ErrorMessage="Campo telefono vacío" ControlToValidate="tbTelefono" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
             <asp:Button ID="registro" runat="server" Text="Registrarse" class="btn3" />
-        </div>
 
+        </div>
         <!-- FOOTER -->
         <div class="footer">
           <img src="../img/logo.png" width="100" alt="" class="d-inline-block align-middle mr-2"/>

@@ -73,6 +73,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:RetoAlojamientosYuuaAsp.Index._lblLogin2">
+<summary>
+Control lblLogin2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:RetoAlojamientosYuuaAsp.Index._titulo">
 <summary>
 Control titulo.
@@ -211,6 +220,15 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:RetoAlojamientosYuuaAsp.Registro._lblLogin">
 <summary>
 Control lblLogin.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:RetoAlojamientosYuuaAsp.Registro._lblLogin2">
+<summary>
+Control lblLogin2.
 </summary>
 <remarks>
 Campo generado automáticamente.

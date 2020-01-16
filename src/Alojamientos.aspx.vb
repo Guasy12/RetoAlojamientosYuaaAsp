@@ -12,8 +12,8 @@ Public Class Alojamientos
     End Sub
 
     Sub busqueda()
-        Dim busqueda = UCase(Session("tbBusqueda"))
-        Dim tipoAloj = UCase(Session("ddlTipoAloj"))
+        Dim busqueda = UCase(Application("tbBusqueda"))
+        Dim tipoAloj = UCase(Application("ddlTipoAloj"))
 
 
         Dim query As New MySqlDataAdapter("SELECT documentname from talojamientos where UPPER(documentname) like '%" & busqueda & "%' or idAlojamiento in" &

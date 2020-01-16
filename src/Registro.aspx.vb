@@ -13,21 +13,40 @@ Public Class Registro
 
     End Sub
 
+
+    Protected Sub registro_Click(sender As Object, e As EventArgs) Handles registro.Click
+        registrar()
+    End Sub
+
+
     Sub registrar()
 
-        cmd = New MySqlCommand("INSERT INTO usuario (idDni,apellidos,contrasena,correo,fechaNacimiento,nombre,nombreUsuario,telefono,tipoUsuario) " &
-                               "VALUES (@id, @name)", conexion)
+        Try
 
-        cmd.Parameters.Add("@id", MySqlDbType.VarChar, 225, "idDni")
-        cmd.Parameters.Add("@apellidos", MySqlDbType.VarChar, 225, "apellidos")
-        cmd.Parameters.Add("@contrasena", MySqlDbType.VarChar, 225, "contrasena")
-        cmd.Parameters.Add("@correo", MySqlDbType.VarChar, 225, "correo")
-        cmd.Parameters.Add("@fechaNacimiento", MySqlDbType.DateTime, 225, "fechaNacimiento")
-        cmd.Parameters.Add("@nombre", MySqlDbType.VarChar, 225, "nombre")
-        cmd.Parameters.Add("@nombreUsuario", MySqlDbType.VarChar, 225, "nombreUsuario")
-        cmd.Parameters.Add("@telefono", MySqlDbType.Int32, 20, "telefono")
-        cmd.Parameters.Add("@tipoUsuario", MySqlDbType.VarChar, 225, "tipoUsuario")
+            conexion.Open()
+            cmd = New MySqlCommand("INSERT INTO usuario (idDni, apellidos, contrasena, correo, fechaNacimiento, nombre, nombreUsuario, telefono, tipoUsuario) " &
+                                   "VALUES (@idDni, @apellidos, @contrasena, @correo, @fechaNacimiento, @nombre, @nombreUsuario, @telefono, @tipoUsuario)", conexion)
 
+            Dim dt = DateTime.ParseExact(tbFechaNacimiento.Text, "dd/MM/yyyy", Nothing)
+
+            cmd.Parameters.AddWithValue("@idDni", tbDni.Text)
+            cmd.Parameters.AddWithValue("@apellidos", tbApellidos.Text)
+            cmd.Parameters.AddWithValue("@contrasena", tbContrasenia.Text)
+            cmd.Parameters.AddWithValue("@correo", tbCorreo.Text)
+            cmd.Parameters.AddWithValue("@fechaNacimiento", dt)
+            cmd.Parameters.AddWithValue("@nombre", tbNombre.Text)
+            cmd.Parameters.AddWithValue("@nombreUsuario", tbUsuario.Text)
+            cmd.Parameters.AddWithValue("@telefono", tbTelefono.Text)
+            cmd.Parameters.AddWithValue("@tipoUsuario", "Cliente")
+            cmd.ExecuteNonQuery()
+            conexion.Close()
+
+            Session("SesionUsuario") = tbUsuario.Text
+            Response.Redirect("Index.aspx")
+
+        Catch ex As MySqlException
+
+        End Try
 
     End Sub
 

@@ -20,8 +20,8 @@ Public Class Index
 
     Protected Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
 
-        Session("tbBusqueda") = tbBusqueda.Text
-        Session("ddlTipoAloj") = ddlTipoAloj.SelectedItem.Text
+        Application("tbBusqueda") = tbBusqueda.Text
+        Application("ddlTipoAloj") = ddlTipoAloj.SelectedItem.Text
         Response.Redirect("Alojamientos.aspx")
 
     End Sub

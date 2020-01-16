@@ -30,4 +30,13 @@ Partial Public Class Alojamientos
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents lblLogin As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lblLogin2.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblLogin2 As Global.System.Web.UI.WebControls.Label
 End Class
