@@ -16,7 +16,8 @@ Public Class Alojamientos
         Dim tipoAloj = UCase(Application("ddlTipoAloj"))
 
 
-        Dim query As New MySqlDataAdapter("SELECT documentname from talojamientos where UPPER(documentname) like '%" & busqueda & "%' or idAlojamiento in" &
+        Dim query As New MySqlDataAdapter("SELECT idAlojamiento,documentname,tourismemail,web,turismdescription from talojamientos " &
+                                          "where UPPER(documentname) like '%" & busqueda & "%' or idAlojamiento in" &
                                           "(SELECT idAlojamiento FROM talojamientos aloj WHERE aloj.localizacion_idLocalizacion in " &
                                           "(SELECT DISTINCT loc.idLocalizacion FROM tlocalizacion loc, tmunicipio mun, tterritorio ter, tpais pais " &
                                           "WHERE(Loc.territorycode in (SELECT territorycode FROM tterritorio WHERE UPPER(territory) Like '%" & busqueda & "%')) " &
@@ -29,10 +30,16 @@ Public Class Alojamientos
         Dim numero As Integer = campoTexto.Rows.Count
 
         For i = 0 To campoTexto.Rows.Count - 1
-            Dim lbl As New Label
-            lbl.Text = (i + 1) & " - " & campoTexto.Rows(i).Item(0)
-            Me.Controls.Add(lbl)
-            Me.Controls.Add(New LiteralControl("<br />"))
+
+            phInformacion.Controls.Add(New LiteralControl("<div class='card'>")
+            phInformacion.Controls.Add(New Button)
+            phInformacion.Controls.Add(New LiteralControl("<h2>" & campoTexto.Rows(i).Item(1) & "</h2>" &
+                                                          "<h5>" & campoTexto.Rows(i).Item(2) & "</h5>" &
+                                                          "<div class='fakeimg'></div>" &
+                                                          "<p>" & campoTexto.Rows(i).Item(3) & "</p>" &
+                                                          "<p>" & campoTexto.Rows(i).Item(4) & "</p>" &
+                                                          "</div>"))
+
         Next
     End Sub
 

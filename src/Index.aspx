@@ -74,22 +74,19 @@
             </div>
         </div>
 
+        <asp:PlaceHolder ID="phInformacion" runat="server"></asp:PlaceHolder>
 
-        <div class="blog-card">
-        <div class="meta">
-          <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
-        </div>
-        <div class="description">
-          <h1>Learning to Code</h1>
-          <h2>Opening a door to the future</h2>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-          <p class="read-more">
-            <a href="#">Read More</a>
-          </p>
-        </div>
-      </div>
+        <!--<div class="card">
+          <h2>TITLE HEADING</h2>
+          <h5>Title description, Dec 7, 2017</h5>
+          <div class="fakeimg" style="height:200px;">Image</div>
+          <p>Some text..</p>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>-->
       
         <!-- FOOTER -->
+        <div class="margen"></div>
         <div class="footer">
           <img src="../img/logo.png" width="100" alt="" class="d-inline-block align-middle mr-2"/>
         </div>

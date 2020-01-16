@@ -29,3 +29,23 @@
     text-align: center;
     padding-top: 20px;
 }
+
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+    height: 200px;
+    background-image: url(../img/imgfondo.jpg);
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+h2 {
+    margin-top:20px;
+}

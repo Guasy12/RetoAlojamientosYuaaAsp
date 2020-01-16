@@ -9,6 +9,7 @@
     
     <link rel="stylesheet" href="../Content/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="../css/navbar.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/index.css"/>
 
     <script src="../Scripts/jquery-3.0.0.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
@@ -50,8 +51,9 @@
           </div>
         </nav>
         </div>
-
+        <asp:PlaceHolder ID="phInformacion" runat="server"></asp:PlaceHolder>
         <!-- FOOTER -->
+        <div class="margen"></div>
         <div class="footer">
           <img src="../img/logo.png" width="100" alt="" class="d-inline-block align-middle mr-2"/>
         </div>
