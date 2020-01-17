@@ -31,16 +31,28 @@ Public Class Alojamientos
 
         For i = 0 To campoTexto.Rows.Count - 1
 
-            phInformacion.Controls.Add(New LiteralControl("<div class='card'>")
-            phInformacion.Controls.Add(New Button)
-            phInformacion.Controls.Add(New LiteralControl("<h2>" & campoTexto.Rows(i).Item(1) & "</h2>" &
+            phInformacion.Controls.Add(New LiteralControl("<div class='card'>" &
+                                                          "<h2>" & campoTexto.Rows(i).Item(1) & "</h2>" &
                                                           "<h5>" & campoTexto.Rows(i).Item(2) & "</h5>" &
                                                           "<div class='fakeimg'></div>" &
                                                           "<p>" & campoTexto.Rows(i).Item(3) & "</p>" &
-                                                          "<p>" & campoTexto.Rows(i).Item(4) & "</p>" &
-                                                          "</div>"))
+                                                          "<p>" & campoTexto.Rows(i).Item(4) & "</p>"))
+            Dim btnReserva As New Button()
+            btnReserva.ID = campoTexto.Rows(i).Item(0)
+            btnReserva.Text = "Reserva"
+            AddHandler btnReserva.Click, AddressOf btnReserva_Click
+            phInformacion.Controls.Add(btnReserva)
+            phInformacion.Controls.Add(New LiteralControl("</div>"))
+
 
         Next
     End Sub
 
+    Private Sub btnReserva_Click(sender As Object, e As EventArgs)
+
+        Dim btn As Button = DirectCast(sender, Button)
+        Dim id As String = btn.ClientID
+        Dim url As String = String.Format("Reserva.aspx?IdAlojamiento={0}", id)
+        Response.Redirect(url)
+    End Sub
 End Class

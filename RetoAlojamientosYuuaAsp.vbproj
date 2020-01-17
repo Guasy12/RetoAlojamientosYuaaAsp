@@ -216,6 +216,7 @@
     <Content Include="src\Index.aspx" />
     <Content Include="src\Login.aspx" />
     <Content Include="src\Registro.aspx" />
+    <Content Include="src\Reserva.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -265,6 +266,13 @@
     </Compile>
     <Compile Include="src\Registro.aspx.vb">
       <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="src\Reserva.aspx.designer.vb">
+      <DependentUpon>Reserva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="src\Reserva.aspx.vb">
+      <DependentUpon>Reserva.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
