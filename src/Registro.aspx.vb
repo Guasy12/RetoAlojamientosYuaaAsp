@@ -52,7 +52,7 @@ Public Class Registro
             Response.Redirect("Index.aspx")
 
         Catch ex As MySqlException
-
+            MsgBox(ex)
         End Try
 
     End Sub
