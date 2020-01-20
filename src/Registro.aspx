@@ -61,7 +61,7 @@
 
         <!-- REGISTRO -->
         <div class="box">
-            <h1>Iniciar Sesión</h1>
+            <h1>Registro</h1>
 
             <asp:TextBox ID="tbUsuario" runat="server" placeholder="Usuario" class="user"></asp:TextBox>
             <br />

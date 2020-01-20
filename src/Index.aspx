@@ -65,7 +65,7 @@
             <div id="busqueda-contenido">
                 <asp:Label ID="titulo" runat="server" Text="Busque su lugar de alojamiento" Font-Size="XX-Large"></asp:Label>
                 <br /><br />
-                <asp:TextBox ID="tbBusqueda" runat="server" placeholder="Localidad" Height="40px" Width="250px"></asp:TextBox>
+                <asp:TextBox ID="tbBusqueda" runat="server" placeholder="Alojamiento/Localidad" Height="40px" Width="250px"></asp:TextBox>
                 <asp:TextBox ID="fechaInicio" runat="server" placeholder="Fecha inicial" Height="40px" Width="150px"></asp:TextBox>
                 <asp:TextBox ID="fechaFin" runat="server" placeholder="Fecha final" Height="40px" Width="150px"></asp:TextBox>
                 <asp:DropDownList ID="ddlTipoAloj" runat="server" Height="40px" Width="150px">

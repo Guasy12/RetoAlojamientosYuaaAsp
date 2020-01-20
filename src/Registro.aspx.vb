@@ -32,10 +32,10 @@ Public Class Registro
 
             Dim dt = DateTime.ParseExact(tbFechaNacimiento.Text, "dd/MM/yyyy", Nothing)
 
-            Dim dniEncriptada As String = metodos.MD5EncryptPass(tbDni.Text)
+            'Dim dniEncriptada As String = metodos.MD5EncryptPass(tbDni.Text)
             Dim claveEncriptada As String = metodos.MD5EncryptPass(tbContrasenia.Text)
 
-            cmd.Parameters.AddWithValue("@idDni", dniEncriptada)
+            cmd.Parameters.AddWithValue("@idDni", tbDni.Text)
             cmd.Parameters.AddWithValue("@apellidos", tbApellidos.Text)
             cmd.Parameters.AddWithValue("@contrasena", claveEncriptada)
             cmd.Parameters.AddWithValue("@correo", tbCorreo.Text)
@@ -47,7 +47,7 @@ Public Class Registro
             cmd.ExecuteNonQuery()
             conexion.Close()
 
-            Session("SesionId") = dniEncriptada
+            Session("SesionId") = tbDni.Text
             Session("SesionUsuario") = tbUsuario.Text
             Response.Redirect("Index.aspx")
 
