@@ -4,11 +4,15 @@ Public Class Index
     Inherits System.Web.UI.Page
     Public conector As String = ConfigurationManager.ConnectionStrings("myConnectionString").ConnectionString
     Public conexion As New MySqlConnection(conector)
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+    Protected Sub Page_PreLoad(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.PreInit
 
         cargarTipoAlojamientos()
         cargarTarjetasInfomacion()
 
+    End Sub
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
 
@@ -18,6 +22,19 @@ Public Class Index
         Application("ddlTipoAloj") = ddlTipoAloj.SelectedItem.Text
         Response.Redirect("Alojamientos.aspx")
 
+    End Sub
+
+
+    Protected Sub cargarTipoAlojamientos()
+        'Rellenar dropdown tipo alojamientos
+        Dim query As New MySqlDataAdapter("SELECT DISTINCT lodgingtype FROM talojamientos ORDER BY lodgingtype ASC", conexion)
+        Dim campoTexto As New DataTable()
+        query.Fill(campoTexto)
+        Dim numero As Integer = campoTexto.Rows.Count
+        ddlTipoAloj.Items.Add("Alojamientos")
+        For i = 0 To campoTexto.Rows.Count - 1
+            ddlTipoAloj.Items.Add(campoTexto.Rows(i).Item(0))
+        Next
     End Sub
 
     Protected Sub cargarTarjetasInfomacion()
@@ -42,18 +59,6 @@ Public Class Index
         Next
 
 
-    End Sub
-
-    Protected Sub cargarTipoAlojamientos()
-        'Rellenar dropdown tipo alojamientos
-        Dim query As New MySqlDataAdapter("SELECT DISTINCT lodgingtype FROM talojamientos ORDER BY lodgingtype ASC", conexion)
-        Dim campoTexto As New DataTable()
-        query.Fill(campoTexto)
-        Dim numero As Integer = campoTexto.Rows.Count
-
-        For i = 0 To campoTexto.Rows.Count - 1
-            ddlTipoAloj.Items.Add(campoTexto.Rows(i).Item(0))
-        Next
     End Sub
 
 End Class
