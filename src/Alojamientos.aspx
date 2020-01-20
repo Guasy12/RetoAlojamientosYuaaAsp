@@ -52,6 +52,18 @@
         </nav>
         </div>
         <asp:PlaceHolder ID="phInformacion" runat="server"></asp:PlaceHolder>
+        <div id="busqueda-container">
+            <div id="busqueda-contenido" class="pegajoso">
+                <asp:Label ID="titulo" runat="server" Text="Busque su lugar de alojamiento" Font-Size="XX-Large"></asp:Label>
+                <br /><br />
+                <asp:TextBox ID="tbBusqueda" runat="server" placeholder="Alojamiento/Localidad" Height="40px" Width="250px"></asp:TextBox>
+                <asp:TextBox ID="fechaInicio" runat="server" placeholder="Fecha inicial" Height="40px" Width="150px"></asp:TextBox>
+                <asp:TextBox ID="fechaFin" runat="server" placeholder="Fecha final" Height="40px" Width="150px"></asp:TextBox>
+                <asp:DropDownList ID="ddlTipoAloj" runat="server" Height="40px" Width="150px">
+                </asp:DropDownList>
+                <asp:Button ID="btnBuscar" runat="server" Text="BUSCAR" Height="40px" />
+            </div>
+        </div>
         <!-- FOOTER -->
         <div class="margen"></div>
         <div class="footer">
