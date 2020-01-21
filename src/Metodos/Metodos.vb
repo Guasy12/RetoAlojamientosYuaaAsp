@@ -1,7 +1,7 @@
 ﻿Imports System.Security.Cryptography
 
 Public Class Metodos
-
+    Inherits System.Web.UI.Page
     Public Function MD5EncryptPass(ByVal StrPass As String)
         Dim md5 As MD5CryptoServiceProvider
         Dim bytValue() As Byte
@@ -21,5 +21,11 @@ Public Class Metodos
 
         Return txtEncriptado
     End Function
+
+    Public Sub logout()
+
+        Session("SesionId") = ""
+        Session("SesionUsuario") = ""
+    End Sub
 
 End Class
