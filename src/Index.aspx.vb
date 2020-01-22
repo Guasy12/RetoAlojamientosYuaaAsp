@@ -44,7 +44,7 @@ Public Class Index
             For i = 0 To campoTexto.Rows.Count - 1
                 phIndexInformacion.Controls.Add(New LiteralControl("<div class='card'>" &
                                                               "<h2>" & campoTexto.Rows(i).Item(1) & "</h2>" &
-                                                              "<h5>" & campoTexto.Rows(i).Item(7) & ", " & campoTexto.Rows(i).Item(8) & ", " & campoTexto.Rows(i).Item(8) & "</h5>" &
+                                                              "<h5>" & campoTexto.Rows(i).Item(7) & ", " & campoTexto.Rows(i).Item(8) & ", " & campoTexto.Rows(i).Item(9) & "</h5>" &
                                                               "<h5>" & campoTexto.Rows(i).Item(5) & "</h5>" &
                                                               "<div class='fakeimg'></div>" &
                                                               "<p>" & campoTexto.Rows(i).Item(3) & "</p>" &
