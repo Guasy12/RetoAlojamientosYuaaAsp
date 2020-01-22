@@ -58,7 +58,6 @@
         </nav>
         </div>
         <div id="reemplazo-header" class="reemplazo">
-
         </div>
         <div id="busqueda-container" class ="pegote">
             <div id="busqueda-contenido">
@@ -72,7 +71,6 @@
                 <asp:Button ID="btnBuscar" runat="server" Text="BUSCAR" Height="40px" />
             </div>
         </div>
-        
         <asp:PlaceHolder ID="phInformacion" runat="server"></asp:PlaceHolder>
         <!-- FOOTER -->
         <div class="margen"></div>

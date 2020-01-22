@@ -42,29 +42,23 @@
                 <li class="nav-item active"><a href="Index.aspx" class="nav-link">Alojamientos <span class="sr-only">(current)</span></a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Reservas</a></li>
                 <li class="nav-item">
-                    <% if Session("SesionUsuario") Is Nothing Then %>
+					<%     If Session("SesionUsuario") Is Nothing Then %>
                     <asp:Label ID="lblLogin" runat="server">
                         <a href="Login.aspx" class="nav-link">Login</a>
                     </asp:Label>
-                    <%else %>
+					<%else %>
                     <asp:Label ID="lblLogin2" runat="server">
                         <a href="#" class="nav-link"><% Response.Write(Session("SesionUsuario")) %></a>
                     </asp:Label>
                     <asp:Button ID="logout" runat="server" Text="Logout" />
-                    <% end if %>
+					<% end if %>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
         </div>
-        
-        <div id="filtro-conta   iner">
-            <div id="back-image-container"></div>
-        </div>
-
         <div id="reemplazo-header" class="reemplazo">
-
         </div>
         <div id="busqueda-container"  class="pegote">
             <div id="busqueda-contenido">
@@ -79,18 +73,10 @@
             </div>
         </div>
 
-        <asp:PlaceHolder ID="phInformacion" runat="server"></asp:PlaceHolder>
+       
+        <asp:PlaceHolder ID="phIndexInformacion" runat="server"></asp:PlaceHolder>
 
-        <!--<div class="card">
-          <h2>TITLE HEADING</h2>
-          <h5>Title description, Dec 7, 2017</h5>
-          <div class="fakeimg" style="height:200px;">Image</div>
-          <p>Some text..</p>
-          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>-->
-      
-        <!-- FOOTER -->
+         <!-- FOOTER -->
         <div class="margen"></div>
         <div class="footer">
           <img src="../img/logo.png" width="100" alt="" class="d-inline-block align-middle mr-2"/>
