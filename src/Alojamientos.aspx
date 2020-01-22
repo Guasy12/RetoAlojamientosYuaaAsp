@@ -15,6 +15,12 @@
     <script src="../Scripts/bootstrap.min.js"></script>
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
     <script src="../Scripts/jquery-3.0.0.slim.min.js"></script>
+    <!-- Datepicker -->
+    <link rel="stylesheet" href="../css/datepicker.css" type="text/css"/>
+    <script src="../Scripts/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script src="../Scripts/bootstrap-datepicker.es.js" charset="UTF-8"></script>
+    <script src="../Scripts/MyScripts/myscripts.js"></script> 
+    
 </head>
 <body>
     <form id="form1" runat="server">
@@ -51,9 +57,11 @@
           </div>
         </nav>
         </div>
-        <asp:PlaceHolder ID="phInformacion" runat="server"></asp:PlaceHolder>
-        <div id="busqueda-container">
-            <div id="busqueda-contenido" class="pegajoso">
+        <div id="reemplazo-header" class="reemplazo">
+
+        </div>
+        <div id="busqueda-container" class ="pegote">
+            <div id="busqueda-contenido">
                 <asp:Label ID="titulo" runat="server" Text="Busque su lugar de alojamiento" Font-Size="XX-Large"></asp:Label>
                 <br /><br />
                 <asp:TextBox ID="tbBusqueda" runat="server" placeholder="Alojamiento/Localidad" Height="40px" Width="250px"></asp:TextBox>
@@ -64,11 +72,15 @@
                 <asp:Button ID="btnBuscar" runat="server" Text="BUSCAR" Height="40px" />
             </div>
         </div>
+        
+        <asp:PlaceHolder ID="phInformacion" runat="server"></asp:PlaceHolder>
         <!-- FOOTER -->
         <div class="margen"></div>
         <div class="footer">
           <img src="../img/logo.png" width="100" alt="" class="d-inline-block align-middle mr-2"/>
         </div>
     </form>
+    <!-- Barra pegajosa -->
+    <script src="../Scripts/MyScripts/jsBarraPegajosa.js"></script>
 </body>
 </html>

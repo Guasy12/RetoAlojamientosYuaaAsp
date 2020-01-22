@@ -3,6 +3,7 @@ window.onscroll = function () { myFunction() };
 
 // Get the header
 var header = document.getElementById("busqueda-container");
+var reemplazo = document.getElementById("reemplazo-header");
 
 // Get the offset position of the navbar
 var sticky = header.offsetTop;
@@ -11,7 +12,11 @@ var sticky = header.offsetTop;
 function myFunction() {
     if (window.pageYOffset > sticky) {
         header.classList.add("sticky");
+        reemplazo.classList.add("reemplazo-activo");
+        reemplazo.classList.remove("reemplazo");
     } else {
         header.classList.remove("sticky");
+        reemplazo.classList.remove("reemplazo-activo");
+        reemplazo.classList.add("reemplazo");
     }
 }

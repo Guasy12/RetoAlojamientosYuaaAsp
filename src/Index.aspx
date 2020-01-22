@@ -15,6 +15,7 @@
     <script src="../Scripts/bootstrap.min.js"></script>
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
     <script src="../Scripts/jquery-3.0.0.slim.min.js"></script>
+    
     <!-- Datepicker -->
     <link rel="stylesheet" href="../css/datepicker.css" type="text/css"/>
     <script src="../Scripts/bootstrap-datepicker.js" type="text/javascript"></script>
@@ -26,7 +27,7 @@
         <!-- MENU -->
         <div id="menu">
         <nav class="navbar navbar-expand-lg py-3">
-          <div class="container">
+          <div class="container" >
             <a href="Index.aspx" class="navbar-brand">
               <!-- Logo Image -->
               <img src="../img/logo.png" width="200" alt="" class="d-inline-block align-middle mr-2"/>
@@ -57,11 +58,14 @@
         </nav>
         </div>
         
-        <div id="filtro-container">
+        <div id="filtro-conta   iner">
             <div id="back-image-container"></div>
         </div>
 
-        <div id="busqueda-container">
+        <div id="reemplazo-header" class="reemplazo">
+
+        </div>
+        <div id="busqueda-container"  class="pegote">
             <div id="busqueda-contenido">
                 <asp:Label ID="titulo" runat="server" Text="Busque su lugar de alojamiento" Font-Size="XX-Large"></asp:Label>
                 <br /><br />
@@ -91,5 +95,7 @@
           <img src="../img/logo.png" width="100" alt="" class="d-inline-block align-middle mr-2"/>
         </div>
     </form>
+    <!-- Barra pegajosa -->
+    <script src="../Scripts/MyScripts/jsBarraPegajosa.js"></script>
 </body>
 </html>
