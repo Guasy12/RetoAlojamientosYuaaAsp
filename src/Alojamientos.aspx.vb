@@ -9,9 +9,10 @@ Public Class Alojamientos
 
     Protected Sub Page_PreInit(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.PreInit
         cargarTipoAlojamientos()
+        buscar()
     End Sub
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        buscar()
+
     End Sub
 
     Protected Sub cargarTipoAlojamientos()
@@ -20,52 +21,6 @@ Public Class Alojamientos
             ddlTipoAloj.Items.Add(tipos(i))
         Next
     End Sub
-    'Private Function queryBusqueda()
-    '
-    '    Dim busqueda = UCase(Application("tbBusqueda"))
-    '    Dim tipoAloj = UCase(Application("ddlTipoAloj"))
-    '    Dim queryDA As MySqlDataAdapter
-    '
-    '    If busqueda <> "" And tipoAloj = "ALOJAMIENTOS" Then
-    '
-    '        queryDA = New MySqlDataAdapter("SELECT idAlojamiento,documentname,tourismemail,web,turismdescription,lodgingtype,loc.postalcode, loc.address, mun.municipality, ter.territory,pais.country " &
-    '                                       "from talojamientos aloj, tlocalizacion loc, tmunicipio mun, tpais pais, tterritorio ter " &
-    '                                       "where aloj.localizacion_idLocalizacion = loc.idLocalizacion and loc.municipalitycode = mun.municipalitycode and loc.countrycode = pais.countrycode and loc.territorycode = ter.territorycode and " &
-    '                                       "(UPPER(documentname) like '%" & busqueda & "%' or idAlojamiento in" &
-    '                                       "(SELECT idAlojamiento FROM talojamientos aloj WHERE aloj.localizacion_idLocalizacion in " &
-    '                                       "(SELECT DISTINCT loc.idLocalizacion FROM tlocalizacion loc, tmunicipio mun, tterritorio ter, tpais pais " &
-    '                                       "WHERE(Loc.territorycode in (SELECT territorycode FROM tterritorio WHERE UPPER(territory) Like '%" & busqueda & "%')) " &
-    '                                       "Or (loc.countrycode in (SELECT countrycode FROM tpais WHERE UPPER(country) Like '%" & busqueda & "%')) " &
-    '                                       "Or (loc.municipalitycode in (SELECT municipalitycode FROM tmunicipio WHERE UPPER(municipality) like '%" & busqueda & "%'))))) " &
-    '                                       "ORDER BY aloj.idAlojamiento ASC", conexion)
-    '
-    '    ElseIf busqueda <> "" Then
-    '        queryDA = New MySqlDataAdapter("SELECT idAlojamiento,documentname,tourismemail,web,turismdescription,lodgingtype,loc.postalcode, loc.address, mun.municipality, ter.territory,pais.country " &
-    '                                       "from talojamientos aloj, tlocalizacion loc, tmunicipio mun, tpais pais, tterritorio ter " &
-    '                                       "where aloj.localizacion_idLocalizacion = loc.idLocalizacion and loc.municipalitycode = mun.municipalitycode and loc.countrycode = pais.countrycode and loc.territorycode = ter.territorycode and " &
-    '                                       "(UPPER(documentname) like '%" & busqueda & "%' or idAlojamiento in" &
-    '                                       "(SELECT idAlojamiento FROM talojamientos aloj WHERE aloj.localizacion_idLocalizacion in " &
-    '                                       "(SELECT DISTINCT loc.idLocalizacion FROM tlocalizacion loc, tmunicipio mun, tterritorio ter, tpais pais " &
-    '                                       "WHERE(Loc.territorycode in (SELECT territorycode FROM tterritorio WHERE UPPER(territory) Like '%" & busqueda & "%')) " &
-    '                                       "Or (loc.countrycode in (SELECT countrycode FROM tpais WHERE UPPER(country) Like '%" & busqueda & "%')) " &
-    '                                       "Or (loc.municipalitycode in (SELECT municipalitycode FROM tmunicipio WHERE UPPER(municipality) like '%" & busqueda & "%')))" &
-    '                                       "And UPPER(lodgingtype) like '%" & tipoAloj & "%')) ORDER BY aloj.idAlojamiento ASC", conexion)
-    '
-    '    ElseIf tipoAloj = "ALOJAMIENTOS" Then
-    '        queryDA = New MySqlDataAdapter("SELECT idAlojamiento,documentname,tourismemail,web,turismdescription,lodgingtype,loc.postalcode, loc.address, mun.municipality, ter.territory,pais.country " &
-    '                                       "from talojamientos aloj, tlocalizacion loc, tmunicipio mun, tpais pais, tterritorio ter " &
-    '                                       "where aloj.localizacion_idLocalizacion = loc.idLocalizacion and loc.municipalitycode = mun.municipalitycode and loc.countrycode = pais.countrycode and loc.territorycode = ter.territorycode " &
-    '                                       "ORDER BY aloj.idAlojamiento ASC", conexion)
-    '    Else
-    '
-    '        queryDA = New MySqlDataAdapter("SELECT idAlojamiento,documentname,tourismemail,web,turismdescription,lodgingtype,loc.postalcode, loc.address, mun.municipality, ter.territory,pais.country " &
-    '                                       "from talojamientos aloj, tlocalizacion loc, tmunicipio mun, tpais pais, tterritorio ter " &
-    '                                       "where aloj.localizacion_idLocalizacion = loc.idLocalizacion and loc.municipalitycode = mun.municipalitycode and loc.countrycode = pais.countrycode and loc.territorycode = ter.territorycode " &
-    '                                       "and (UPPER(lodgingtype) Like '%" & tipoAloj & "%') ORDER BY aloj.idAlojamiento ASC", conexion)
-    '    End If
-    '
-    '    Return queryDA
-    'End Function
 
     Protected Sub buscar()
         Try
@@ -102,9 +57,11 @@ Public Class Alojamientos
     End Sub
 
     Protected Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        phInformacion.Controls.Clear()
         Session("tbBusqueda") = tbBusqueda.Text
         Session("ddlTipoAloj") = ddlTipoAloj.SelectedItem.Text
         Session("tbCheckIn") = fechaInicio.Text
         Session("tbCheckOut") = fechaFin.Text
+        buscar()
     End Sub
 End Class
