@@ -41,6 +41,15 @@ Partial Public Class Index
     Protected WithEvents lblLogin2 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''Control logout.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents logout As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
     '''Control titulo.
     '''</summary>
     '''<remarks>
