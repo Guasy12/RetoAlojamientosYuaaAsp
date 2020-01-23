@@ -262,6 +262,11 @@
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="src\Metodos\Metodos.vb" />
+    <Compile Include="src\Objetos\Alojamiento.vb" />
+    <Compile Include="src\Objetos\Localizacion.vb" />
+    <Compile Include="src\Objetos\Municipio.vb" />
+    <Compile Include="src\Objetos\Pais.vb" />
+    <Compile Include="src\Objetos\Territorio.vb" />
     <Compile Include="src\Registro.aspx.designer.vb">
       <DependentUpon>Registro.aspx</DependentUpon>
     </Compile>
