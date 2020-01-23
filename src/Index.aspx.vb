@@ -6,8 +6,6 @@ Public Class Index
     Public conexion As New MySqlConnection(conector)
     Public metodos As New Metodos
 
-
-
     Protected Sub Page_PreInit(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.PreInit
         cargarTipoAlojamientos()
     End Sub
