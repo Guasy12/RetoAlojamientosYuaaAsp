@@ -12,103 +12,130 @@ Option Explicit On
 
 
 Partial Public Class Index
-
-	'''<summary>
-	'''Control form1.
-	'''</summary>
-	'''<remarks>
-	'''Campo generado automáticamente.
-	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-	'''</remarks>
-	Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-
-	'''<summary>
-	'''Control lblLogin.
-	'''</summary>
-	'''<remarks>
-	'''Campo generado automáticamente.
-	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-	'''</remarks>
-	Protected WithEvents lblLogin As Global.System.Web.UI.WebControls.Label
-
-	'''<summary>
-	'''Control lblLogin2.
-	'''</summary>
-	'''<remarks>
-	'''Campo generado automáticamente.
-	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-	'''</remarks>
-	Protected WithEvents lblLogin2 As Global.System.Web.UI.WebControls.Label
-
-	'''<summary>
-	'''Control logout.
-	'''</summary>
-	'''<remarks>
-	'''Campo generado automáticamente.
-	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-	'''</remarks>
-	Protected WithEvents logout As Global.System.Web.UI.WebControls.Button
-
-	'''<summary>
-	'''Control titulo.
-	'''</summary>
-	'''<remarks>
-	'''Campo generado automáticamente.
-	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-	'''</remarks>
-	Protected WithEvents titulo As Global.System.Web.UI.WebControls.Label
-
-	'''<summary>
-	'''Control tbBusqueda.
-	'''</summary>
-	'''<remarks>
-	'''Campo generado automáticamente.
-	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-	'''</remarks>
-	Protected WithEvents tbBusqueda As Global.System.Web.UI.WebControls.TextBox
-
-	'''<summary>
-	'''Control fechaInicio.
-	'''</summary>
-	'''<remarks>
-	'''Campo generado automáticamente.
-	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-	'''</remarks>
-	Protected WithEvents fechaInicio As Global.System.Web.UI.WebControls.TextBox
-
-	'''<summary>
-	'''Control fechaFin.
-	'''</summary>
-	'''<remarks>
-	'''Campo generado automáticamente.
-	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-	'''</remarks>
-	Protected WithEvents fechaFin As Global.System.Web.UI.WebControls.TextBox
-
-	'''<summary>
-	'''Control ddlTipoAloj.
-	'''</summary>
-	'''<remarks>
-	'''Campo generado automáticamente.
-	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-	'''</remarks>
-	Protected WithEvents ddlTipoAloj As Global.System.Web.UI.WebControls.DropDownList
-
-	'''<summary>
-	'''Control btnBuscar.
-	'''</summary>
-	'''<remarks>
-	'''Campo generado automáticamente.
-	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-	'''</remarks>
-	Protected WithEvents btnBuscar As Global.System.Web.UI.WebControls.Button
-
-	'''<summary>
-	'''Control phIndexInformacion.
-	'''</summary>
-	'''<remarks>
-	'''Campo generado automáticamente.
-	'''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-	'''</remarks>
-	Protected WithEvents phIndexInformacion As Global.System.Web.UI.WebControls.PlaceHolder
+    
+    '''<summary>
+    '''Control form1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+    
+    '''<summary>
+    '''Control lblLogin.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblLogin As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control lblLogin2.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblLogin2 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control logout.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents logout As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''Control titulo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents titulo As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control tbBusqueda.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents tbBusqueda As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Control fechaInicio.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents fechaInicio As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Control fechaFin.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents fechaFin As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Control ddlTipoAloj.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ddlTipoAloj As Global.System.Web.UI.WebControls.DropDownList
+    
+    '''<summary>
+    '''Control btnBuscar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnBuscar As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''Control HiddenFieldNombre.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents HiddenFieldNombre As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''Control HiddenFieldLat.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents HiddenFieldLat As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''Control HiddenFieldLon.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents HiddenFieldLon As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''Control phIndexInformacion.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents phIndexInformacion As Global.System.Web.UI.WebControls.PlaceHolder
 End Class

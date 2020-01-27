@@ -217,6 +217,33 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:RetoAlojamientosYuuaAsp.Index._HiddenFieldNombre">
+<summary>
+Control HiddenFieldNombre.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:RetoAlojamientosYuuaAsp.Index._HiddenFieldLat">
+<summary>
+Control HiddenFieldLat.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:RetoAlojamientosYuuaAsp.Index._HiddenFieldLon">
+<summary>
+Control HiddenFieldLon.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:RetoAlojamientosYuuaAsp.Index._phIndexInformacion">
 <summary>
 Control phIndexInformacion.

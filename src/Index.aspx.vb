@@ -14,6 +14,7 @@ Public Class Index
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         cargarTarjetasInfomacion()
+        cargarMapa()
     End Sub
 
     Protected Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
@@ -26,10 +27,15 @@ Public Class Index
 
 
     Protected Sub cargarTipoAlojamientos()
-        Dim tipos() As String = metodos.recogerTipoAlojamientos
-        For i = 0 To tipos.Length - 1
-            ddlTipoAloj.Items.Add(tipos(i))
-        Next
+        Try
+            Dim tipos() As String = metodos.recogerTipoAlojamientos
+            For i = 0 To tipos.Length - 1
+                ddlTipoAloj.Items.Add(tipos(i))
+            Next
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Protected Sub cargarTarjetasInfomacion()
@@ -63,5 +69,30 @@ Public Class Index
 
     Protected Sub logout_Click(sender As Object, e As EventArgs) Handles logout.Click
         metodos.logout()
+    End Sub
+
+    Protected Sub cargarMapa()
+        Try
+            Dim query As New MySqlDataAdapter("SELECT documentname, Loc.latwgs84, Loc.lonwgs84 " &
+                                              "from talojamientos aloj, tlocalizacion loc, tmunicipio mun, tpais pais, tterritorio ter " &
+                                              "where aloj.localizacion_idLocalizacion = loc.idLocalizacion and loc.municipalitycode = mun.municipalitycode and loc.countrycode = pais.countrycode and loc.territorycode = ter.territorycode ", conexion)
+            Dim campoTexto As New DataTable()
+            query.Fill(campoTexto)
+            Dim numero As Integer = campoTexto.Rows.Count
+            Dim nombre As String = "", lat As String = "", lon As String = ""
+
+            For i = 0 To campoTexto.Rows.Count - 1
+
+                nombre += campoTexto.Rows(i).Item(0) & "~"
+                lat += campoTexto.Rows(i).Item(1).ToString & "~"
+                lon += campoTexto.Rows(i).Item(2).ToString & "~"
+            Next
+
+            HiddenFieldNombre.Value = nombre
+            HiddenFieldLat.Value = lat
+            HiddenFieldLon.Value = lon
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class

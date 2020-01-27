@@ -20,7 +20,10 @@
     <link rel="stylesheet" href="../css/datepicker.css" type="text/css"/>
     <script src="../Scripts/bootstrap-datepicker.js" type="text/javascript"></script>
     <script src="../Scripts/bootstrap-datepicker.es.js" charset="UTF-8"></script>
-    <script src="../Scripts/MyScripts/myscripts.js"></script> 
+    <script src="../Scripts/MyScripts/myscripts.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.11&sensor=false" type="text/javascript"></script>
+    
 </head>
 <body>
     <form id="form1" runat="server">
@@ -73,8 +76,15 @@
             </div>
         </div>
 
-       
+        <!-- Mapa -->
+        <div id="map" class="mapa"></div>
+        <asp:HiddenField ID="HiddenFieldNombre" runat="server" />
+        <asp:HiddenField ID="HiddenFieldLat" runat="server" />
+        <asp:HiddenField ID="HiddenFieldLon" runat="server" />
+        <script src="../Scripts/MyScripts/mapa.js"></script>
+
         <asp:PlaceHolder ID="phIndexInformacion" runat="server"></asp:PlaceHolder>
+
 
          <!-- FOOTER -->
         <div class="margen"></div>
@@ -84,5 +94,6 @@
     </form>
     <!-- Barra pegajosa -->
     <script src="../Scripts/MyScripts/jsBarraPegajosa.js"></script>
+    
 </body>
 </html>
