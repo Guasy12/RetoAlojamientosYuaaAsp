@@ -100,6 +100,26 @@ Public Class Metodos
             MsgBox(ex.Message)
         End Try
         Return False
+
+    End Function
+
+    Public Function queryAlojamientoPorId(id As String) As Alojamiento
+
+        Dim busqueda = UCase(Session("tbBusqueda"))
+        Dim tipoAloj = UCase(Session("ddlTipoAloj"))
+        Dim queryAloj As New MySqlDataAdapter("SELECT * " &
+                                       "FROM talojamientos aloj, tlocalizacion loc, tmunicipio mun, tpais pais, tterritorio ter " &
+                                       "WHERE aloj.localizacion_idLocalizacion = loc.idLocalizacion and loc.municipalitycode = mun.municipalitycode and loc.countrycode = pais.countrycode and loc.territorycode = ter.territorycode and aloj.idAlojamiento='" & id & "'", conexion)
+
+
+        Dim alojsDS As DataSet = New DataSet
+        queryAloj.Fill(alojsDS, "Alojamiento")
+        Dim aloj As Alojamiento
+        For Each cmp As DataRow In alojsDS.Tables(0).Rows
+            aloj = New Alojamiento(id, cmp("capacity").ToString(), cmp("documentname"), cmp("turismdescription"), cmp("tourismemail"), cmp("telefono"), cmp("lodgingtype"), cmp("web"), New Localizacion(cmp("idLocalizacion").ToString(), cmp("postalcode").ToString(), cmp("address").ToString(), cmp("latwgs84").ToString(), cmp("latwgs84").ToString(), New Pais(cmp("latwgs84").ToString(), cmp("latwgs84").ToString()), New Territorio(), New Municipio()))
+        Next
+
+        Return aloj
     End Function
 
 End Class

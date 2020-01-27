@@ -262,9 +262,18 @@
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="src\Metodos\Metodos.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+=======
+    <Compile Include="src\Metodos\Metodos.vb" />
+    <Compile Include="src\Objetos\Alojamiento.vb" />
+    <Compile Include="src\Objetos\Localizacion.vb" />
+    <Compile Include="src\Objetos\Municipio.vb" />
+    <Compile Include="src\Objetos\Pais.vb" />
+    <Compile Include="src\Objetos\Territorio.vb" />
+>>>>>>> bc73fa65489d1c0b3b879f82ca82c2f22a8b6206
     <Compile Include="src\Registro.aspx.designer.vb">
       <DependentUpon>Registro.aspx</DependentUpon>
     </Compile>
