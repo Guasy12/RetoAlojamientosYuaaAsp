@@ -505,15 +505,6 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._Label1">
-<summary>
-Control Label1.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
 <member name="F:RetoAlojamientosYuuaAsp.Reserva._lblLogin">
 <summary>
 Control lblLogin.
@@ -694,9 +685,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._latAloj">
+<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblMunicipio">
 <summary>
-Control latAloj.
+Control lblMunicipio.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -712,27 +703,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._lonAloj">
+<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblTerritorio">
 <summary>
-Control lonAloj.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblInfo11">
-<summary>
-Control lblInfo11.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._Municipio">
-<summary>
-Control Municipio.
+Control lblTerritorio.
 </summary>
 <remarks>
 Campo generado automáticamente.

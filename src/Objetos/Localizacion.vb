@@ -1,11 +1,9 @@
 ﻿Public Class Localizacion
 	Public id As Char()
-	Public codPostal, direccion, latitud, longitud As String
-	Public pais As Pais
-	Public territorio As Territorio
-	Public municipio As Municipio
+	Public codPostal, direccion, latitud, longitud, pais, territorio, municipio As String
 
-	Public Sub New(id() As Char, codPostal As String, direccion As String, latitud As String, longitud As String, pais As Pais, territorio As Territorio, municipio As Municipio)
+
+	Public Sub New(id() As Char, codPostal As String, direccion As String, latitud As String, longitud As String, pais As String, territorio As String, municipio As String)
 		Me.id = id
 		Me.codPostal = codPostal
 		Me.direccion = direccion
