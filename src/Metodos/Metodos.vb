@@ -116,7 +116,7 @@ Public Class Metodos
         queryAloj.Fill(alojsDS, "Alojamiento")
         Dim aloj As Alojamiento
         For Each cmp As DataRow In alojsDS.Tables(0).Rows
-            aloj = New Alojamiento(id, cmp("capacity").ToString(), cmp("documentname"), cmp("turismdescription"), cmp("tourismemail"), cmp("telefono"), cmp("lodgingtype"), cmp("web"), New Localizacion(cmp("idLocalizacion").ToString(), cmp("postalcode").ToString(), cmp("address").ToString(), cmp("latwgs84").ToString(), cmp("latwgs84").ToString(), New Pais(cmp("latwgs84").ToString(), cmp("latwgs84").ToString()), New Territorio(), New Municipio()))
+            aloj = New Alojamiento(id, cmp("capacity").ToString(), cmp("documentname"), cmp("turismdescription"), cmp("tourismemail"), cmp("telefono"), cmp("lodgingtype"), cmp("web"), New Localizacion(cmp("idLocalizacion").ToString(), cmp("postalcode").ToString(), cmp("address").ToString(), cmp("latwgs84").ToString(), cmp("latwgs84").ToString(), New Pais(cmp("latwgs84").ToString(), cmp("latwgs84").ToString()), New Territorio("", ""), New Municipio("", "")))
         Next
 
         Return aloj

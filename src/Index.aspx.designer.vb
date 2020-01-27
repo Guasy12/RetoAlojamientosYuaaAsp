@@ -104,33 +104,6 @@ Partial Public Class Index
     Protected WithEvents btnBuscar As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''Control HiddenFieldNombre.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents HiddenFieldNombre As Global.System.Web.UI.WebControls.HiddenField
-    
-    '''<summary>
-    '''Control HiddenFieldLat.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents HiddenFieldLat As Global.System.Web.UI.WebControls.HiddenField
-    
-    '''<summary>
-    '''Control HiddenFieldLon.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents HiddenFieldLon As Global.System.Web.UI.WebControls.HiddenField
-    
-    '''<summary>
     '''Control phIndexInformacion.
     '''</summary>
     '''<remarks>

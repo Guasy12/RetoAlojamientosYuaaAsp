@@ -76,13 +76,6 @@
 			</div>
 		</div>
 
-        <!-- Mapa -->
-        <div id="map" class="mapa"></div>
-        <asp:HiddenField ID="HiddenFieldNombre" runat="server" />
-        <asp:HiddenField ID="HiddenFieldLat" runat="server" />
-        <asp:HiddenField ID="HiddenFieldLon" runat="server" />
-        <script src="../Scripts/MyScripts/mapa.js"></script>
-
         <asp:PlaceHolder ID="phIndexInformacion" runat="server"></asp:PlaceHolder>
 
 

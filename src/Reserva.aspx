@@ -9,19 +9,18 @@
     
     <link rel="stylesheet" href="../Content/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="../css/navbar.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
     
 
     <script src="../Scripts/jquery-3.0.0.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
     <script src="../Scripts/jquery-3.0.0.slim.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.11&sensor=false" type="text/javascript"></script>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-        </div>
-
         <!-- MENU -->
 		<div id="menu">
 			<nav class="navbar navbar-expand-lg py-3">
@@ -100,6 +99,14 @@
 
 		<div id="reemplazo-header" class="reemplazo">
 		</div>
+
+        <!-- Mapa -->
+        <div id="map" class="mapa"></div>
+        <asp:HiddenField ID="HiddenFieldNombre" runat="server" />
+        <asp:HiddenField ID="HiddenFieldLat" runat="server" />
+        <asp:HiddenField ID="HiddenFieldLon" runat="server" />
+        <script src="../Scripts/MyScripts/mapa.js"></script>
+
 		<!-- FOOTER -->
 		<div class="margen"></div>
 		<div class="footer">
