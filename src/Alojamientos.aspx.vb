@@ -16,7 +16,7 @@ Public Class Alojamientos
     End Sub
 
     Protected Sub cargarTipoAlojamientos()
-        Dim tipos() As String = Metodos.recogerTipoAlojamientos
+        Dim tipos() As String = metodos.recogerTipoAlojamientos()
         For i = 0 To tipos.Length - 1
             ddlTipoAloj.Items.Add(tipos(i))
         Next

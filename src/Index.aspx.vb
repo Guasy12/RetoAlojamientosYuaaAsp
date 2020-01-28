@@ -37,9 +37,9 @@ Public Class Index
 
     Protected Sub cargarTarjetasInfomacion()
         Try
-            Dim query As New MySqlDataAdapter("SELECT idAlojamiento, documentname, tourismemail, web, turismdescription,lodgingtype , Loc.postalcode, Loc.address, mun.municipality, ter.territory, pais.country " &
-                                              "from talojamientos aloj, tlocalizacion loc, tmunicipio mun, tpais pais, tterritorio ter " &
-                                              "where aloj.localizacion_idLocalizacion = loc.idLocalizacion and loc.municipalitycode = mun.municipalitycode and loc.countrycode = pais.countrycode and loc.territorycode = ter.territorycode " &
+            Dim query As New MySqlDataAdapter("SELECT idAlojamiento, documentname, tourismemail, web, turismdescription, lodgingtype, loc.postalcode, loc.address, loc.municipality, loc.territory, loc.country " &
+                                              "FROM talojamientos aloj, tlocalizacion loc " &
+                                              "WHERE aloj.localizacion_idLocalizacion = loc.idLocalizacion " &
                                               "ORDER BY RAND() LIMIT 2 ", conexion)
             Dim campoTexto As New DataTable()
             query.Fill(campoTexto)
