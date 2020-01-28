@@ -9,7 +9,6 @@
     
     <link rel="stylesheet" href="../Content/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="../css/navbar.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/index.css" />
     
 
     <script src="../Scripts/jquery-3.0.0.min.js"></script>
@@ -17,7 +16,9 @@
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
     <script src="../Scripts/jquery-3.0.0.slim.min.js"></script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.11&sensor=false" type="text/javascript"></script>
+    <!-- MAPA -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">

@@ -74,4 +74,10 @@
 .reemplazo-activo{
     display:block;
 }
-
+/* MAPA */
+.mapa {
+    width: auto;
+    height: 500px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
