@@ -9,6 +9,7 @@
     
     <link rel="stylesheet" href="../Content/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="../css/navbar.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
     
 
     <script src="../Scripts/jquery-3.0.0.min.js"></script>
@@ -56,37 +57,32 @@
 				</div>
 			</nav>
 		</div>
-		<asp:Label ID="lblInfo01" runat="server" Text="Nombre:"></asp:Label>
-		<asp:Label ID="lblNombreAlojamiento" runat="server" Text=""></asp:Label>
+
+        <div class='card'>
+            <h2>
+		        <asp:Label ID="lblNombreAlojamiento" runat="server" Text=""></asp:Label>
+            </h2>
+            <h5>
+                <asp:Label ID="lblDireccionAloj" runat="server" Text=""></asp:Label>
+                <asp:Label ID="lblCodPostal" runat="server" Text=""></asp:Label>
+                <asp:Label ID="lblMunicipio" runat="server" Text=""></asp:Label>
+                <asp:Label ID="lblTerritorio" runat="server" Text=""></asp:Label>
+            </h5>
+            <h5>
+                <asp:Label ID="lblEmailAlojamiento" runat="server" Text=""></asp:Label>
+                <asp:Label ID="lblTelefonoAlojamiento" runat="server" Text=""></asp:Label>
+                <asp:Label ID="lblWebAlojmaiento" runat="server" Text=""></asp:Label>
+            </h5>
+            <div class='fakeimg'></div>
+            <p>
+                <asp:Label ID="lblTipoAlojamiento" runat="server" Text=""></asp:Label>
+            </p>
+            <p>
+		        <asp:Label ID="lblDescripcionAlojamiento" runat="server" Text=""></asp:Label>
+            </p>
+        </div>
 		
-		<asp:Label ID="lblInfo02" runat="server" Text="Descripcion:"></asp:Label>
-		<asp:Label ID="lblDescripcionAlojamiento" runat="server" Text=""></asp:Label>
-
-		<asp:Label ID="lblInfo03" runat="server" Text="E-mail:"></asp:Label>
-		<asp:Label ID="lblEmailAlojamiento" runat="server" Text=""></asp:Label>
-
-		<asp:Label ID="lblInfo04" runat="server" Text="Telefono:"></asp:Label>
-		<asp:Label ID="lblTelefonoAlojamiento" runat="server" Text=""></asp:Label>
-
-		<asp:Label ID="lblInfo05" runat="server" Text="Tipo:"></asp:Label>
-		<asp:Label ID="lblTipoAlojamiento" runat="server" Text=""></asp:Label>
-
-		<asp:Label ID="lblInfo06" runat="server" Text="Web:"></asp:Label>
-		<asp:Label ID="lblWebAlojmaiento" runat="server" Text=""></asp:Label>
-
-
 		
-		<asp:Label ID="lblInfo07" runat="server" Text="Codigo postal:"></asp:Label>
-		<asp:Label ID="lblCodPostal" runat="server" Text=""></asp:Label>
-
-		<asp:Label ID="lblInfo08" runat="server" Text="Direccion:"></asp:Label>
-		<asp:Label ID="lblDireccionAloj" runat="server" Text=""></asp:Label>
-
-		<asp:Label ID="lblInfo09" runat="server" Text="Municipio:"></asp:Label>
-		<asp:Label ID="lblMunicipio" runat="server" Text=""></asp:Label>
-
-		<asp:Label ID="lblInfo10" runat="server" Text="Territorio:"></asp:Label>
-		<asp:Label ID="lblTerritorio" runat="server" Text=""></asp:Label>
 
 
 		<div id="reemplazo-header" class="reemplazo">

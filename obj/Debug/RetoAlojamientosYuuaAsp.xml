@@ -532,135 +532,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblInfo01">
-<summary>
-Control lblInfo01.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
 <member name="F:RetoAlojamientosYuuaAsp.Reserva._lblNombreAlojamiento">
 <summary>
 Control lblNombreAlojamiento.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblInfo02">
-<summary>
-Control lblInfo02.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblDescripcionAlojamiento">
-<summary>
-Control lblDescripcionAlojamiento.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblInfo03">
-<summary>
-Control lblInfo03.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblEmailAlojamiento">
-<summary>
-Control lblEmailAlojamiento.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblInfo04">
-<summary>
-Control lblInfo04.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblTelefonoAlojamiento">
-<summary>
-Control lblTelefonoAlojamiento.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblInfo05">
-<summary>
-Control lblInfo05.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblTipoAlojamiento">
-<summary>
-Control lblTipoAlojamiento.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblInfo06">
-<summary>
-Control lblInfo06.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblWebAlojmaiento">
-<summary>
-Control lblWebAlojmaiento.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblInfo07">
-<summary>
-Control lblInfo07.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblCodPostal">
-<summary>
-Control lblCodPostal.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblInfo08">
-<summary>
-Control lblInfo08.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -676,9 +550,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblInfo09">
+<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblCodPostal">
 <summary>
-Control lblInfo09.
+Control lblCodPostal.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -694,18 +568,54 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblInfo10">
+<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblTerritorio">
 <summary>
-Control lblInfo10.
+Control lblTerritorio.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblTerritorio">
+<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblEmailAlojamiento">
 <summary>
-Control lblTerritorio.
+Control lblEmailAlojamiento.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblTelefonoAlojamiento">
+<summary>
+Control lblTelefonoAlojamiento.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblWebAlojmaiento">
+<summary>
+Control lblWebAlojmaiento.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblTipoAlojamiento">
+<summary>
+Control lblTipoAlojamiento.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:RetoAlojamientosYuuaAsp.Reserva._lblDescripcionAlojamiento">
+<summary>
+Control lblDescripcionAlojamiento.
 </summary>
 <remarks>
 Campo generado automáticamente.
