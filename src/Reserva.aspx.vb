@@ -38,4 +38,11 @@ Public Class Reserva
 		HiddenFieldLon.Value = aloj.localizacion.longitud
 	End Sub
 
+    Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles btnReservar.Click
+        Response.Redirect("Login.aspx")
+    End Sub
+
+    Protected Sub logout_Click(sender As Object, e As EventArgs) Handles logout.Click
+        metodos.logout()
+    End Sub
 End Class

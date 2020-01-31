@@ -7,8 +7,11 @@ Public Class Login
     Public conexion As New MySqlConnection(conector)
     Public sqlAdapter As New MySqlDataAdapter
     Public dsUsuario As New DataSet
+    Private Shared prevPage As String = String.Empty
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
+        If (Not IsPostBack) Then
+            prevPage = Request.UrlReferrer.ToString()
+        End If
     End Sub
 
     Protected Sub registro_Click(sender As Object, e As EventArgs) Handles registro.Click
@@ -38,7 +41,7 @@ Public Class Login
 
                 Session("SesionId") = dsUsuario.Tables(0).Rows(0).Item(0)
                 Session("SesionUsuario") = dsUsuario.Tables(0).Rows(0).Item(1)
-                Response.Redirect("Index.aspx")
+                Response.Redirect(prevPage)
 
             Else
                 errorLogin.text = "Usuario o contraseña incorrectos"

@@ -64,4 +64,8 @@ Public Class Alojamientos
         Session("tbCheckOut") = fechaFin.Text
         buscar()
     End Sub
+
+    Protected Sub logout_Click(sender As Object, e As EventArgs) Handles logout.Click
+        metodos.logout()
+    End Sub
 End Class

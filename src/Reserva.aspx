@@ -43,11 +43,11 @@
 							<li class="nav-item">
 								<%     If Session("SesionUsuario") Is Nothing Then %>
 								<asp:Label ID="lblLogin" runat="server">
-                        <a href="Login.aspx" class="nav-link">Login</a>
+                                    <a href="Login.aspx" class="nav-link">Login</a>
 								</asp:Label>
 								<%else %>
 								<asp:Label ID="lblLogin2" runat="server">
-                        <a href="#" class="nav-link"><% Response.Write(Session("SesionUsuario")) %></a>
+                                    <a href="#" class="nav-link"><% Response.Write(Session("SesionUsuario")) %></a>
 								</asp:Label>
 								<asp:Button ID="logout" runat="server" Text="Logout" />
 								<% end if %>
@@ -79,6 +79,7 @@
             </p>
             <p>
 		        <asp:Label ID="lblDescripcionAlojamiento" runat="server" Text=""></asp:Label>
+                <asp:Button ID="btnReservar" runat="server" Text="Reservar" />
             </p>
         </div>
 		

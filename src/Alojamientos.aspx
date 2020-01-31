@@ -50,6 +50,7 @@
                     <asp:Label ID="lblLogin2" runat="server">
                         <a href="#" class="nav-link"><% Response.Write(Session("SesionUsuario")) %></a>
                     </asp:Label>
+                    <asp:Button ID="logout" runat="server" Text="Logout" />
                     <% end if %>
                 </li>
               </ul>

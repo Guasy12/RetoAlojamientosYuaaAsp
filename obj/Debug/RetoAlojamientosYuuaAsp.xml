@@ -64,6 +64,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:RetoAlojamientosYuuaAsp.Alojamientos._logout">
+<summary>
+Control logout.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:RetoAlojamientosYuuaAsp.Alojamientos._titulo">
 <summary>
 Control titulo.
@@ -616,6 +625,15 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:RetoAlojamientosYuuaAsp.Reserva._lblDescripcionAlojamiento">
 <summary>
 Control lblDescripcionAlojamiento.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:RetoAlojamientosYuuaAsp.Reserva._btnReservar">
+<summary>
+Control btnReservar.
 </summary>
 <remarks>
 Campo generado automáticamente.
