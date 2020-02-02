@@ -4,6 +4,7 @@ Public Class Reserva
 	Inherits System.Web.UI.Page
 	Public conector As String = ConfigurationManager.ConnectionStrings("myConnectionString").ConnectionString
 	Public conexion As New MySqlConnection(conector)
+	Public cmd As MySqlCommand
 
 	Public alojamiento As Alojamiento
 	Private metodos As New Metodos
@@ -38,11 +39,36 @@ Public Class Reserva
 		HiddenFieldLon.Value = aloj.localizacion.longitud
 	End Sub
 
-    Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles btnReservar.Click
-        Response.Redirect("Login.aspx")
-    End Sub
+	Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles btnReservar.Click
+		If Session("SesionUsuario") Is Nothing Then
+			Response.Redirect("Login.aspx")
+		Else
+			Try
 
-    Protected Sub logout_Click(sender As Object, e As EventArgs) Handles logout.Click
+				conexion.Open()
+				cmd = New MySqlCommand("INSERT INTO reserva (idReserva, fechaEntrada, fechaSalida, idAlojamiento, idDni) " &
+									   "VALUES (@idReserva, @fechaEntrada, @fechaSalida, @idAlojamiento, @idDni)", conexion)
+
+				Dim dtCheckIn = DateTime.ParseExact(Session("tbCheckIn"), "dd/MM/yyyy", Nothing)
+				Dim dtCheckOut = DateTime.ParseExact(Session("tbCheckOut"), "dd/MM/yyyy", Nothing)
+
+
+				cmd.Parameters.AddWithValue("@idReserva", 1)
+				cmd.Parameters.AddWithValue("@fechaEntrada", dtCheckIn)
+				cmd.Parameters.AddWithValue("@fechaSalida", dtCheckOut)
+				cmd.Parameters.AddWithValue("@idAlojamiento", Request.QueryString("idAlojamiento"))
+				cmd.Parameters.AddWithValue("@idDni", Session("SesionId"))
+				cmd.ExecuteNonQuery()
+				conexion.Close()
+
+			Catch ex As MySqlException
+				MsgBox(ex)
+			End Try
+		End If
+
+	End Sub
+
+	Protected Sub logout_Click(sender As Object, e As EventArgs) Handles logout.Click
         metodos.logout()
     End Sub
 End Class
