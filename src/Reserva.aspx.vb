@@ -35,40 +35,54 @@ Public Class Reserva
 		Me.lblMunicipio.Text = aloj.localizacion.municipio
 		Me.lblTerritorio.Text = aloj.localizacion.territorio
 
-		HiddenFieldLat.Value = aloj.localizacion.latitud
+        Me.fechaInicio.Text = Session("tbCheckIn")
+        Me.fechaFin.Text = Session("tbCheckOut")
+
+        HiddenFieldLat.Value = aloj.localizacion.latitud
 		HiddenFieldLon.Value = aloj.localizacion.longitud
 	End Sub
 
 	Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles btnReservar.Click
-		If Session("SesionUsuario") Is Nothing Then
-			Response.Redirect("Login.aspx")
-		Else
-			Try
+        If Session("SesionUsuario") Is Nothing Then
+            Response.Redirect("Login.aspx")
+        Else
+            If MsgBox("¿Está seguro de realizar esta reserva?", MsgBoxStyle.YesNo, MsgBoxStyle.MsgBoxSetForeground) = MsgBoxResult.Yes Then
+                MsgBox(Me.fechaInicio.Text & " " & Me.fechaFin.Text)
+                Try
 
-				conexion.Open()
-				cmd = New MySqlCommand("INSERT INTO reserva (idReserva, fechaEntrada, fechaSalida, idAlojamiento, idDni) " &
-									   "VALUES (@idReserva, @fechaEntrada, @fechaSalida, @idAlojamiento, @idDni)", conexion)
+                    Dim query As New MySqlDataAdapter("SELECT MAX(idReserva) from reserva", conexion)
+                    Dim campoTexto As New DataTable()
+                    query.Fill(campoTexto)
 
-				Dim dtCheckIn = DateTime.ParseExact(Session("tbCheckIn"), "dd/MM/yyyy", Nothing)
-				Dim dtCheckOut = DateTime.ParseExact(Session("tbCheckOut"), "dd/MM/yyyy", Nothing)
+                    conexion.Open()
+                    cmd = New MySqlCommand("INSERT INTO reserva (idReserva, fechaEntrada, fechaSalida, idAlojamiento, idDni) " &
+                                       "VALUES (@idReserva, @fechaEntrada, @fechaSalida, @idAlojamiento, @idDni)", conexion)
+
+                    Dim dtCheckIn = DateTime.ParseExact(fechaInicio.Text, "dd/MM/yyyy", Nothing)
+                    Dim dtCheckOut = DateTime.ParseExact(fechaFin.Text, "dd/MM/yyyy", Nothing)
 
 
-				cmd.Parameters.AddWithValue("@idReserva", 1)
-				cmd.Parameters.AddWithValue("@fechaEntrada", dtCheckIn)
-				cmd.Parameters.AddWithValue("@fechaSalida", dtCheckOut)
-				cmd.Parameters.AddWithValue("@idAlojamiento", Request.QueryString("idAlojamiento"))
-				cmd.Parameters.AddWithValue("@idDni", Session("SesionId"))
-				cmd.ExecuteNonQuery()
-				conexion.Close()
+                    cmd.Parameters.AddWithValue("@idReserva", campoTexto.Rows(0).Item(0) + 1)
+                    cmd.Parameters.AddWithValue("@fechaEntrada", dtCheckIn)
+                    cmd.Parameters.AddWithValue("@fechaSalida", dtCheckOut)
+                    cmd.Parameters.AddWithValue("@idAlojamiento", Request.QueryString("idAlojamiento"))
+                    cmd.Parameters.AddWithValue("@idDni", Session("SesionId"))
+                    cmd.ExecuteNonQuery()
+                    conexion.Close()
 
-			Catch ex As MySqlException
-				MsgBox(ex)
-			End Try
-		End If
+                Catch ex As MySqlException
+                    MsgBox(ex.Message)
+                End Try
+            End If
+        End If
 
-	End Sub
+    End Sub
 
 	Protected Sub logout_Click(sender As Object, e As EventArgs) Handles logout.Click
         metodos.logout()
+    End Sub
+
+    Protected Sub fechaInicio_TextChanged(sender As Object, e As EventArgs) Handles fechaInicio.TextChanged
+
     End Sub
 End Class

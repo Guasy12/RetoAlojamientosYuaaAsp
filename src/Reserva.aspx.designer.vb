@@ -59,6 +59,24 @@ Partial Public Class Reserva
     Protected WithEvents lblNombreAlojamiento As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''Control fechaInicio.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents fechaInicio As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Control fechaFin.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents fechaFin As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
     '''Control lblDireccionAloj.
     '''</summary>
     '''<remarks>

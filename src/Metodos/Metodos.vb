@@ -78,7 +78,7 @@ Public Class Metodos
                                                     "SELECT idAlojamiento FROM talojamientos aloj WHERE aloj.localizacion_idLocalizacion IN(" &
                                                         "SELECT DISTINCT loc.idLocalizacion FROM tlocalizacion loc " &
                                                         "WHERE UPPER(territory) LIKE '%" & busqueda & "%' OR UPPER(country) LIKE '%" & busqueda & "%' OR UPPER(municipality) LIKE '%" & busqueda & "%')" &
-                                                    ")" &
+                                                    ")" & condicionTipoAlojamiento &
                                                ")" & condicionFechasDisponibilidad &
                                                "ORDER BY aloj.idAlojamiento ASC"
                 queryDA = New MySqlDataAdapter(sqlBusquedaPorNombre, conexion)
@@ -113,7 +113,7 @@ Public Class Metodos
         Dim loc As Localizacion
         For Each cmp As DataRow In alojsDS.Tables(0).Rows
             loc = New Localizacion(cmp("idLocalizacion").ToString(), cmp("postalcode").ToString(), cmp("address").ToString(), cmp("latwgs84").ToString(), cmp("lonwgs84").ToString(), cmp("country").ToString(), cmp("territory").ToString(), cmp("municipality").ToString())
-            aloj = New Alojamiento(id, cmp("capacity").ToString(), cmp("documentname"), cmp("turismdescription"), cmp("tourismemail"), cmp("phone"), cmp("lodgingtype"), cmp("web"), loc)
+            aloj = New Alojamiento(id, cmp("capacity"), cmp("documentname"), cmp("turismdescription"), cmp("tourismemail"), cmp("phone"), cmp("lodgingtype"), cmp("web"), loc)
         Next
 
         Return aloj

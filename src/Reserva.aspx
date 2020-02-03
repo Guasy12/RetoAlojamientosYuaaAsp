@@ -17,6 +17,12 @@
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
     <script src="../Scripts/jquery-3.0.0.slim.min.js"></script>
 
+    <!-- Datepicker -->
+    <link rel="stylesheet" href="../css/datepicker.css" type="text/css"/>
+    <script src="../Scripts/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script src="../Scripts/bootstrap-datepicker.es.js" charset="UTF-8"></script>
+    <script src="../Scripts/MyScripts/myscripts.js"></script>
+
     <!-- MAPA -->
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css" rel="stylesheet" />
@@ -62,6 +68,8 @@
             <h2>
 		        <asp:Label ID="lblNombreAlojamiento" runat="server" Text=""></asp:Label>
             </h2>
+            <asp:TextBox ID="fechaInicio" runat="server"></asp:TextBox>
+            <asp:TextBox ID="fechaFin" runat="server"></asp:TextBox>
             <h5>
                 <asp:Label ID="lblDireccionAloj" runat="server" Text=""></asp:Label>
                 <asp:Label ID="lblCodPostal" runat="server" Text=""></asp:Label>

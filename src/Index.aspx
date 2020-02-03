@@ -22,7 +22,6 @@
     <script src="../Scripts/bootstrap-datepicker.es.js" charset="UTF-8"></script>
     <script src="../Scripts/MyScripts/myscripts.js"></script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.11&sensor=false" type="text/javascript"></script>
 </head>
 <body>
 	<form id="form1" runat="server">
