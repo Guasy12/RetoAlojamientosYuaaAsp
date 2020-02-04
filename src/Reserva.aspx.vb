@@ -35,8 +35,10 @@ Public Class Reserva
 		Me.lblMunicipio.Text = aloj.localizacion.municipio
 		Me.lblTerritorio.Text = aloj.localizacion.territorio
 
-        Me.fechaInicio.Text = Session("tbCheckIn")
-        Me.fechaFin.Text = Session("tbCheckOut")
+        If Session("tbCheckIn") <> "" And Session("tbCheckOut") <> "" Then
+            Me.fechaInicio.Text = Session("tbCheckIn")
+            Me.fechaFin.Text = Session("tbCheckOut")
+        End If
 
         HiddenFieldLat.Value = aloj.localizacion.latitud
 		HiddenFieldLon.Value = aloj.localizacion.longitud
@@ -47,7 +49,7 @@ Public Class Reserva
             Response.Redirect("Login.aspx")
         Else
             If MsgBox("¿Está seguro de realizar esta reserva?", MsgBoxStyle.YesNo, MsgBoxStyle.MsgBoxSetForeground) = MsgBoxResult.Yes Then
-                MsgBox(Me.fechaInicio.Text & " " & Me.fechaFin.Text)
+
                 Try
 
                     Dim query As New MySqlDataAdapter("SELECT MAX(idReserva) from reserva", conexion)
