@@ -22,11 +22,11 @@ $(function () {
 });
 
 $(function () {
-    $('[id*=tbFechaNacimiento]').datepicker({
-        startDate: new Date('01/01/1990'),
+    $('#tbFechaNacimiento').datepicker({
+        startDate: '-100y',
         changeMonth: true,
         changeYear: true,
-        yearRange: "-100:+100",
+        yearRange: "1950:2015",
         format: "dd/mm/yyyy",
         language: "es"
     });
