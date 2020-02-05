@@ -325,6 +325,51 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:RetoAlojamientosYuuaAsp.Perfil._form1">
+<summary>
+Control form1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:RetoAlojamientosYuuaAsp.Perfil._lblLogin">
+<summary>
+Control lblLogin.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:RetoAlojamientosYuuaAsp.Perfil._lblLogin2">
+<summary>
+Control lblLogin2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:RetoAlojamientosYuuaAsp.Perfil._logout">
+<summary>
+Control logout.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:RetoAlojamientosYuuaAsp.Perfil._phReservas">
+<summary>
+Control phReservas.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:RetoAlojamientosYuuaAsp.Registro._form1">
 <summary>
 Control form1.

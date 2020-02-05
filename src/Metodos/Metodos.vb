@@ -113,7 +113,7 @@ Public Class Metodos
         Dim loc As Localizacion
         For Each cmp As DataRow In alojsDS.Tables(0).Rows
             loc = New Localizacion(cmp("idLocalizacion").ToString(), cmp("postalcode").ToString(), cmp("address").ToString(), cmp("latwgs84").ToString(), cmp("lonwgs84").ToString(), cmp("country").ToString(), cmp("territory").ToString(), cmp("municipality").ToString())
-            aloj = New Alojamiento(id, cmp("capacity"), cmp("documentname"), cmp("turismdescription"), cmp("tourismemail"), cmp("phone"), cmp("lodgingtype"), cmp("web"), loc)
+            aloj = New Alojamiento(id, cmp("capacity"), cmp("documentname").ToString(), cmp("turismdescription").ToString(), cmp("tourismemail").ToString(), cmp("phone").ToString(), cmp("lodgingtype").ToString(), cmp("web").ToString(), loc)
         Next
 
         Return aloj

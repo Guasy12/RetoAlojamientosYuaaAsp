@@ -45,7 +45,6 @@
 					<div id="navbarSupportedContent" class="collapse navbar-collapse">
 						<ul class="navbar-nav ml-auto">
 							<li class="nav-item active"><a href="Index.aspx" class="nav-link">Alojamientos <span class="sr-only">(current)</span></a></li>
-							<li class="nav-item"><a href="#" class="nav-link">Reservas</a></li>
 							<li class="nav-item">
 								<%     If Session("SesionUsuario") Is Nothing Then %>
 								<asp:Label ID="lblLogin" runat="server">
@@ -53,7 +52,7 @@
 								</asp:Label>
 								<%else %>
 								<asp:Label ID="lblLogin2" runat="server">
-                                    <a href="#" class="nav-link"><% Response.Write(Session("SesionUsuario")) %></a>
+                                    <a href="Perfil.aspx" class="nav-link"><% Response.Write(Session("SesionUsuario")) %></a>
 								</asp:Label>
 								<asp:Button ID="logout" runat="server" Text="Logout" />
 								<% end if %>

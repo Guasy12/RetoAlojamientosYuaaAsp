@@ -217,6 +217,7 @@
     <Content Include="src\Alojamientos.aspx" />
     <Content Include="src\Index.aspx" />
     <Content Include="src\Login.aspx" />
+    <Content Include="src\Perfil.aspx" />
     <Content Include="src\Registro.aspx" />
     <Content Include="src\Reserva.aspx" />
     <Content Include="Web.config" />
@@ -267,6 +268,13 @@
     </Compile>
     <Compile Include="src\Objetos\Alojamiento.vb" />
     <Compile Include="src\Objetos\Localizacion.vb" />
+    <Compile Include="src\Perfil.aspx.designer.vb">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="src\Perfil.aspx.vb">
+      <DependentUpon>Perfil.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="src\Registro.aspx.designer.vb">
       <DependentUpon>Registro.aspx</DependentUpon>
     </Compile>
