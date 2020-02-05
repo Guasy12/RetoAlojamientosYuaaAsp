@@ -77,6 +77,7 @@
 
             <asp:TextBox ID="tbDni" runat="server" placeholder="Dni" class="textboxGenerico"></asp:TextBox>
             <br />
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="DNI no valido Ej. 12345678A" EnableClientScript="False" ControlToValidate="tbDni" ValidationExpression="\d{8}[A-Z]"></asp:RegularExpressionValidator>
             <asp:RequiredFieldValidator ID="dniValidator" runat="server" ErrorMessage="Campo dni vacío" ControlToValidate="tbDni" EnableClientScript="False" ></asp:RequiredFieldValidator>
             <br />
 
