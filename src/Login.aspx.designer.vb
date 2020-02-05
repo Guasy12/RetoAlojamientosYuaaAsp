@@ -12,7 +12,7 @@ Option Explicit On
 
 
 Partial Public Class Login
-    
+
     '''<summary>
     '''Control form1.
     '''</summary>
@@ -21,7 +21,7 @@ Partial Public Class Login
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-    
+
     '''<summary>
     '''Control lblLogin.
     '''</summary>
@@ -30,7 +30,7 @@ Partial Public Class Login
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents lblLogin As Global.System.Web.UI.WebControls.Label
-    
+
     '''<summary>
     '''Control lblLogin2.
     '''</summary>
@@ -39,7 +39,16 @@ Partial Public Class Login
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents lblLogin2 As Global.System.Web.UI.WebControls.Label
-    
+
+    '''<summary>
+    '''Control logout.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents logout As Global.System.Web.UI.WebControls.Button
+
     '''<summary>
     '''Control tbUsuario.
     '''</summary>
@@ -48,7 +57,7 @@ Partial Public Class Login
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents tbUsuario As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''Control userValidator.
     '''</summary>
@@ -57,7 +66,7 @@ Partial Public Class Login
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents userValidator As Global.System.Web.UI.WebControls.RequiredFieldValidator
-    
+
     '''<summary>
     '''Control tbContrasenia.
     '''</summary>
@@ -66,7 +75,7 @@ Partial Public Class Login
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents tbContrasenia As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''Control passValidator.
     '''</summary>
@@ -75,7 +84,7 @@ Partial Public Class Login
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents passValidator As Global.System.Web.UI.WebControls.RequiredFieldValidator
-    
+
     '''<summary>
     '''Control errorLogin.
     '''</summary>
@@ -84,7 +93,7 @@ Partial Public Class Login
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents errorLogin As Global.System.Web.UI.WebControls.Label
-    
+
     '''<summary>
     '''Control login.
     '''</summary>
@@ -93,7 +102,7 @@ Partial Public Class Login
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents login As Global.System.Web.UI.WebControls.Button
-    
+
     '''<summary>
     '''Control registro.
     '''</summary>

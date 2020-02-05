@@ -45,49 +45,65 @@
 					<div id="navbarSupportedContent" class="collapse navbar-collapse">
 						<ul class="navbar-nav ml-auto">
 							<li class="nav-item active"><a href="Index.aspx" class="nav-link">Alojamientos <span class="sr-only">(current)</span></a></li>
-							<li class="nav-item">
-								<%     If Session("SesionUsuario") Is Nothing Then %>
-								<asp:Label ID="lblLogin" runat="server">
-                                    <a href="Login.aspx" class="nav-link">Login</a>
-								</asp:Label>
-								<%else %>
-								<asp:Label ID="lblLogin2" runat="server">
-                                    <a href="Perfil.aspx" class="nav-link"><% Response.Write(Session("SesionUsuario")) %></a>
-								</asp:Label>
-								<asp:Button ID="logout" runat="server" Text="Logout" />
-								<% end if %>
-							</li>
+							<%If Session("SesionUsuario") Is Nothing Then %>
+					            <li class="nav-item">
+						            <asp:Label ID="lblLogin" runat="server">
+                                        <a href="Login.aspx" class="nav-link">Login</a>
+						            </asp:Label>
+					            </li>
+				            <%else %>
+					            <li class="nav-item">
+						            <asp:Label ID="lblLogin2" runat="server">
+                                         <a href="Perfil.aspx" class="nav-link"><% Response.Write(Session("SesionUsuario")) %></a>
+						            </asp:Label>
+					            </li>
+					            <li class="nav-item">
+						            <asp:Button ID="logout" runat="server" Text="Logout" CssClass="logout"/>
+					            </li>
+				            <% end if %>
 						</ul>
 					</div>
 				</div>
 			</nav>
 		</div>
 
-        <div class='card'>
-            <h2>
+        <div class="card">
+            <h2 class="h2style">
 		        <asp:Label ID="lblNombreAlojamiento" runat="server" Text=""></asp:Label>
             </h2>
-            <asp:TextBox ID="fechaInicio" runat="server"></asp:TextBox>
-            <asp:TextBox ID="fechaFin" runat="server"></asp:TextBox>
-            <h5>
-                <asp:Label ID="lblDireccionAloj" runat="server" Text=""></asp:Label>
-                <asp:Label ID="lblCodPostal" runat="server" Text=""></asp:Label>
-                <asp:Label ID="lblMunicipio" runat="server" Text=""></asp:Label>
+            <div>
+                <p>
+                <asp:TextBox ID="fechaInicio" runat="server" Height="40px" Width="150px" placeholder="Fecha inicial"></asp:TextBox>
+                <asp:TextBox ID="fechaFin" runat="server" Height="40px" Width="150px" placeholder="Fecha final"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Se requiere fecha de entrada" ControlToValidate="fechaInicio" EnableClientScript="False"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Se requiere fecha de salida" ControlToValidate="fechaFin" EnableClientScript="False"></asp:RequiredFieldValidator>
+                </p>
+            </div>
+            
+            <h5 class="candaraStyle">
+                <asp:Label ID="lblDireccionAloj" runat="server" Text=""></asp:Label>,&nbsp
+                <asp:Label ID="lblMunicipio" runat="server" Text=""></asp:Label>,&nbsp
+                <asp:Label ID="lblCodPostal" runat="server" Text=""></asp:Label>,&nbsp
                 <asp:Label ID="lblTerritorio" runat="server" Text=""></asp:Label>
             </h5>
-            <h5>
-                <asp:Label ID="lblEmailAlojamiento" runat="server" Text=""></asp:Label>
-                <asp:Label ID="lblTelefonoAlojamiento" runat="server" Text=""></asp:Label>
-                <asp:Label ID="lblWebAlojmaiento" runat="server" Text=""></asp:Label>
+            <h5 class="candaraStyle">
+                <asp:Label ID="lblTipoAlojamiento" runat="server" Text=""></asp:Label>
+                
             </h5>
             <div class='fakeimg'></div>
-            <p>
-                <asp:Label ID="lblTipoAlojamiento" runat="server" Text=""></asp:Label>
+            <p class="candaraStyle">
+                <asp:Label ID="lblEmailAlojamiento" runat="server" Text=""></asp:Label>
             </p>
-            <p>
+            <p class="candaraStyle">
+                <asp:Label ID="lblTelefonoAlojamiento" runat="server" Text=""></asp:Label>
+            </p>
+            <p class="candaraStyle">
+                <asp:Label ID="lblWebAlojmaiento" runat="server" Text=""></asp:Label>
+            </p>
+            <p class="candaraStyle">
 		        <asp:Label ID="lblDescripcionAlojamiento" runat="server" Text=""></asp:Label>
-                <asp:Button ID="btnReservar" runat="server" Text="Reservar" />
             </p>
+            <asp:Button ID="btnReservar" runat="server" Text="Reservar" class="boton_reserva"/>
         </div>
 		
 		

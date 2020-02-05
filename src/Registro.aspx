@@ -39,19 +39,22 @@
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active"><a href="Index.aspx" class="nav-link">Alojamientos <span class="sr-only">(current)</span></a></li>
-                <li class="nav-item">
-                    
-                    <% if Session("SesionUsuario") Is Nothing Then %>
-                    <asp:Label ID="lblLogin" runat="server">
-                        <a href="Login.aspx" class="nav-link">Login</a>
-                    </asp:Label>
-                    <%else %>
-                    <asp:Label ID="lblLogin2" runat="server">
-                        <a href="Perfil.aspx" class="nav-link"><% Response.Write(Session("SesionUsuario")) %></a>
-                    </asp:Label>
-                    <% end if %>
-                    
-                </li>
+                <%If Session("SesionUsuario") Is Nothing Then %>
+					<li class="nav-item">
+						<asp:Label ID="lblLogin" runat="server">
+                            <a href="Login.aspx" class="nav-link">Login</a>
+						</asp:Label>
+					</li>
+				<%else %>
+					<li class="nav-item">
+						<asp:Label ID="lblLogin2" runat="server">
+                             <a href="Perfil.aspx" class="nav-link"><% Response.Write(Session("SesionUsuario")) %></a>
+						</asp:Label>
+					</li>
+					<li class="nav-item">
+						<asp:Button ID="logout" runat="server" Text="Logout" CssClass="logout"/>
+					</li>
+				<% end if %>
               </ul>
             </div>
           </div>
@@ -92,13 +95,14 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo fecha vacío" ControlToValidate="tbFechaNacimiento" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
 
-            <asp:TextBox ID="tbCorreo" placeholder="Correo" class="textboxGenerico" runat="server"></asp:TextBox>
+            <asp:TextBox ID="tbCorreo" placeholder="Correo" class="textboxGenerico" runat="server" TextMode="Email"></asp:TextBox>
             <br />
             <asp:RequiredFieldValidator ID="correoValidator" runat="server" ErrorMessage="Campo correo vacío" ControlToValidate="tbCorreo" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
 
-            <asp:TextBox ID="tbTelefono" placeholder="Teléfono" class="textboxGenerico" runat="server"></asp:TextBox>
+            <asp:TextBox ID="tbTelefono" placeholder="Teléfono" class="textboxGenerico" runat="server" TextMode="Phone"></asp:TextBox>
             <br />
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Deben ser 9 digitos" EnableClientScript="False" ValidationExpression="\d{9}" ControlToValidate="tbTelefono"></asp:RegularExpressionValidator>
             <asp:RequiredFieldValidator ID="telefonoValidator" runat="server" ErrorMessage="Campo telefono vacío" ControlToValidate="tbTelefono" EnableClientScript="False"></asp:RequiredFieldValidator>
             <br />
 

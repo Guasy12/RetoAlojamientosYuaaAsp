@@ -48,33 +48,36 @@ Public Class Reserva
         If Session("SesionUsuario") Is Nothing Then
             Response.Redirect("Login.aspx")
         Else
-            If MsgBox("¿Está seguro de realizar esta reserva?", MsgBoxStyle.YesNo, MsgBoxStyle.MsgBoxSetForeground) = MsgBoxResult.Yes Then
+            If Me.IsValid Then
+                If MsgBox("¿Está seguro de realizar esta reserva?", MsgBoxStyle.YesNo, MsgBoxStyle.MsgBoxSetForeground) = MsgBoxResult.Yes Then
 
-                Try
+                    Try
 
-                    Dim query As New MySqlDataAdapter("SELECT MAX(idReserva) from reserva", conexion)
-                    Dim campoTexto As New DataTable()
-                    query.Fill(campoTexto)
+                        Dim query As New MySqlDataAdapter("SELECT MAX(idReserva) from reserva", conexion)
+                        Dim campoTexto As New DataTable()
+                        query.Fill(campoTexto)
 
-                    conexion.Open()
-                    cmd = New MySqlCommand("INSERT INTO reserva (idReserva, fechaEntrada, fechaSalida, idAlojamiento, idDni) " &
-                                       "VALUES (@idReserva, @fechaEntrada, @fechaSalida, @idAlojamiento, @idDni)", conexion)
+                        conexion.Open()
+                        cmd = New MySqlCommand("INSERT INTO reserva (idReserva, fechaEntrada, fechaSalida, idAlojamiento, idDni) " &
+                                           "VALUES (@idReserva, @fechaEntrada, @fechaSalida, @idAlojamiento, @idDni)", conexion)
 
-                    Dim dtCheckIn = DateTime.ParseExact(fechaInicio.Text, "dd/MM/yyyy", Nothing)
-                    Dim dtCheckOut = DateTime.ParseExact(fechaFin.Text, "dd/MM/yyyy", Nothing)
+                        Dim dtCheckIn = DateTime.ParseExact(fechaInicio.Text, "dd/MM/yyyy", Nothing)
+                        Dim dtCheckOut = DateTime.ParseExact(fechaFin.Text, "dd/MM/yyyy", Nothing)
 
 
-                    cmd.Parameters.AddWithValue("@idReserva", campoTexto.Rows(0).Item(0) + 1)
-                    cmd.Parameters.AddWithValue("@fechaEntrada", dtCheckIn)
-                    cmd.Parameters.AddWithValue("@fechaSalida", dtCheckOut)
-                    cmd.Parameters.AddWithValue("@idAlojamiento", Request.QueryString("idAlojamiento"))
-                    cmd.Parameters.AddWithValue("@idDni", Session("SesionId"))
-                    cmd.ExecuteNonQuery()
-                    conexion.Close()
-
-                Catch ex As MySqlException
-                    MsgBox(ex.Message)
-                End Try
+                        cmd.Parameters.AddWithValue("@idReserva", campoTexto.Rows(0).Item(0) + 1)
+                        cmd.Parameters.AddWithValue("@fechaEntrada", dtCheckIn)
+                        cmd.Parameters.AddWithValue("@fechaSalida", dtCheckOut)
+                        cmd.Parameters.AddWithValue("@idAlojamiento", Request.QueryString("idAlojamiento"))
+                        cmd.Parameters.AddWithValue("@idDni", Session("SesionId"))
+                        cmd.ExecuteNonQuery()
+                        conexion.Close()
+                        MsgBox("Reserva realizada con exito", MsgBoxStyle.OkOnly)
+                        Response.Redirect("Perfil.aspx")
+                    Catch ex As MySqlException
+                        MsgBox(ex.Message)
+                    End Try
+                End If
             End If
         End If
 
