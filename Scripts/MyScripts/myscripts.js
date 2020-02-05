@@ -18,9 +18,6 @@ $(function () {
         changeYear: true,
         format: "dd/mm/yyyy",
         language: "es"
-    }).on('changeDate', function (selected) {
-        var maxDate = new Date(selected.date.valueOf());
-        $('#fechaInicio').datepicker('setEndDate', maxDate);
     });
 });
 

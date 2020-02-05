@@ -53,7 +53,7 @@
 		</div>
 
         <asp:PlaceHolder ID="phReservas" runat="server"></asp:PlaceHolder>
-
+        
         <!-- FOOTER -->
 		<div class="margen"></div>
 		<div class="footer">

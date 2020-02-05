@@ -3,7 +3,7 @@ Public Class Perfil
     Inherits System.Web.UI.Page
     Public conector As String = ConfigurationManager.ConnectionStrings("myConnectionString").ConnectionString
     Public conexion As New MySqlConnection(conector)
-    Public metodos As Metodos
+    Public metodos As New Metodos
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         If (Session("SesionUsuario") Is Nothing) Then
@@ -59,7 +59,7 @@ Public Class Perfil
     End Sub
 
     Protected Sub logout_Click(sender As Object, e As EventArgs) Handles logout.Click
-        Metodos.logout()
+        metodos.logout()
+        Response.Redirect("Login.aspx")
     End Sub
-
 End Class
