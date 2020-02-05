@@ -46,15 +46,16 @@ Public Class Index
             Dim numero As Integer = campoTexto.Rows.Count
             For i = 0 To campoTexto.Rows.Count - 1
                 phIndexInformacion.Controls.Add(New LiteralControl("<div class='card'>" &
-                                                              "<h2>" & campoTexto.Rows(i).Item(1) & "</h2>" &
-                                                              "<h5>" & campoTexto.Rows(i).Item(7) & ", " & campoTexto.Rows(i).Item(8) & ", " & campoTexto.Rows(i).Item(9) & "</h5>" &
-                                                              "<h5>" & campoTexto.Rows(i).Item(5) & "</h5>" &
+                                                              "<h2 class='h2style'>" & campoTexto.Rows(i).Item(1) & "</h2>" &
+                                                              "<h5 class='candaraStyle'>" & campoTexto.Rows(i).Item(7) & ", " & campoTexto.Rows(i).Item(8) & ", " & campoTexto.Rows(i).Item(9) & "</h5>" &
+                                                              "<h5 class='candaraStyle'>" & campoTexto.Rows(i).Item(5) & "</h5>" &
                                                               "<div class='fakeimg'></div>" &
-                                                              "<p>" & campoTexto.Rows(i).Item(3) & "</p>" &
-                                                              "<p>" & campoTexto.Rows(i).Item(4) & "</p>"))
+                                                              "<p class='candaraStyle'>" & campoTexto.Rows(i).Item(3) & "</p>" &
+                                                              "<p class='candaraStyle'>" & campoTexto.Rows(i).Item(4) & "</p>"))
                 Dim btnIndexReserva As New Button()
                 btnIndexReserva.ID = campoTexto.Rows(i).Item(0)
                 btnIndexReserva.Text = "Reservar"
+                btnIndexReserva.CssClass = "boton_reserva"
                 btnIndexReserva.PostBackUrl = String.Format("Reserva.aspx?IdAlojamiento={0}", campoTexto.Rows(i).Item(0))
                 phIndexInformacion.Controls.Add(btnIndexReserva)
                 phIndexInformacion.Controls.Add(New LiteralControl("</div>"))

@@ -7,12 +7,112 @@
     background-image: url(../img/imgfondo.jpg);
 }
 
+.logout {
+    text-decoration: none;
+    padding: 5px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #1883ba;
+    background-color: #FFffff;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+    width: 100%;
+    float: none;
+    text-align: center;
+    margin-left: 450%;
+}
+    .logout:hover {
+        color: #ffffff;
+        background-color: #FFB600;
+    }
+
 /* Add a card effect for articles */
 .card {
     background-color: white;
     padding-left: 20%;
     padding-right: 20%;
 }
-h2 {
-    margin-top:20px;
+
+.h2style {
+    margin-top: 30px;
+    font-family: 'Candara', sans-serif;
+}
+.candaraStyle {
+    font-family: 'Candara', sans-serif;
+}
+
+.boton_reserva {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+}
+
+    .boton_reserva:hover {
+        color: #1883ba;
+        background-color: #ffffff;
+    }
+
+.boton_cancelar_reserva {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+    width: 100%;
+    float:none;
+    text-align: center;
+}
+
+    .boton_cancelar_reserva:hover {
+        color: #1883ba;
+        background-color: #ffffff;
+    }
+
+/* Tabla reservas */
+.cardReservas {
+    background-color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+#tablaReservas {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-family: 'Candara', sans-serif;
+    font-size: x-large;
+    margin-top: 100px;
+}
+
+#tablaReservas td, #tablaReservas th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#tablaReservas tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tablaReservas tr:hover {
+    background-color: #ddd;
+}
+
+#tablaReservas th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1565C0;
+    color: #FFB600;
+}
+.sinReserva {
+    margin-top: 100px;
+    text-align: center;
+    font-size: xx-large;
 }

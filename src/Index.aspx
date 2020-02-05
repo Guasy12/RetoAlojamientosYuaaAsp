@@ -41,18 +41,25 @@
 					<div id="navbarSupportedContent" class="collapse navbar-collapse">
 						<ul class="navbar-nav ml-auto">
 							<li class="nav-item active"><a href="Index.aspx" class="nav-link">Alojamientos <span class="sr-only">(current)</span></a></li>
-							<li class="nav-item">
+							
 								<%     If Session("SesionUsuario") Is Nothing Then %>
+							<li class="nav-item">
 								<asp:Label ID="lblLogin" runat="server">
                                     <a href="Login.aspx" class="nav-link">Login</a>
 								</asp:Label>
+								</li>
 								<%else %>
+								<li class="nav-item">
 								<asp:Label ID="lblLogin2" runat="server">
                                     <a href="Perfil.aspx" class="nav-link"><% Response.Write(Session("SesionUsuario")) %></a>
 								</asp:Label>
-								<asp:Button ID="logout" runat="server" Text="Logout" />
-								<% end if %>
+								</li>
+							<li class="nav-item">
+								<asp:Button ID="logout" runat="server" Text="Logout" CssClass="logout"/>
 							</li>
+								<% end if %>
+								
+							
 						</ul>
 					</div>
 				</div>

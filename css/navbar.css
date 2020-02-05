@@ -3,7 +3,11 @@
 }
 .nav-link {
     color: white;
+    font-size: large;
 }
+    .nav-link:hover {
+        color: #FFB600;
+    }
 
 .footer {
     position: fixed;
