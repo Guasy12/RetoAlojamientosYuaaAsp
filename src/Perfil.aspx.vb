@@ -70,7 +70,7 @@ Public Class Perfil
         Dim btn As Button = DirectCast(sender, Button)
         Dim id As String = btn.ClientID
 
-        If MsgBox("¿Está seguro de realizar esta reserva?", MsgBoxStyle.YesNo, MsgBoxStyle.MsgBoxSetForeground) = MsgBoxResult.Yes Then
+        If MsgBox("¿Está seguro de cancelar esta reserva?", MsgBoxStyle.YesNo, MsgBoxStyle.MsgBoxSetForeground) = MsgBoxResult.Yes Then
 
             Try
                 conexion.Open()
