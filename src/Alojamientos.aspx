@@ -40,13 +40,13 @@
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active"><a href="Index.aspx" class="nav-link">Alojamientos <span class="sr-only">(current)</span></a></li>
-                <%If Session("SesionUsuario") Is Nothing Then %>
+                	<%If Session("SesionUsuario") Is Nothing Then %>
 					<li class="nav-item">
 						<asp:Label ID="lblLogin" runat="server">
                             <a href="Login.aspx" class="nav-link">Login</a>
 						</asp:Label>
 					</li>
-				<%else %>
+						<%else %>
 					<li class="nav-item">
 						<asp:Label ID="lblLogin2" runat="server">
                              <a href="Perfil.aspx" class="nav-link"><% Response.Write(Session("SesionUsuario")) %></a>
@@ -55,7 +55,7 @@
 					<li class="nav-item">
 						<asp:Button ID="logout" runat="server" Text="Logout" CssClass="logout"/>
 					</li>
-				<% end if %>
+						<% end if %>
               </ul>
             </div>
           </div>
@@ -72,6 +72,10 @@
                 <asp:TextBox ID="fechaFin" runat="server" placeholder="Fecha final" Height="40px" Width="150px"></asp:TextBox>
                 <asp:DropDownList ID="ddlTipoAloj" runat="server" Height="40px" Width="150px">
                 </asp:DropDownList>
+                <asp:DropDownList ID="ddlOrdenarAscDesc" runat="server" AutoPostBack="True" Height="40px" Width="150px">
+					<asp:ListItem>Ascendente</asp:ListItem>
+					<asp:ListItem>Descendente</asp:ListItem>
+				</asp:DropDownList>
                 <asp:Button ID="btnBuscar" runat="server" Text="BUSCAR" Height="40px" />
             </div>
         </div>

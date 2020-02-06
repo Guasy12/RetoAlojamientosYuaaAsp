@@ -100,6 +100,64 @@ Public Class Metodos
         Return Nothing
     End Function
 
+
+    Public Function queryBusquedaOrdenada(orden As String) As MySqlDataAdapter
+        If orden = "Ascendente" Then
+            orden = " ORDER BY aloj.documentname ASC"
+        Else
+            orden = " ORDER BY aloj.documentname DESC"
+        End If
+        Try
+            Dim busqueda = UCase(Session("tbBusqueda"))
+            Dim tipoAloj = UCase(Session("ddlTipoAloj"))
+            Dim checkInString = UCase(Session("tbCheckIn"))
+            Dim checkOutString = UCase(Session("tbCheckOut"))
+            Dim queryDA As MySqlDataAdapter
+            Dim condicionTipoAlojamiento As String = " AND UPPER(lodgingtype) LIKE '%" & tipoAloj & "%'"
+            Dim condicionFechasDisponibilidad As String = ""
+            If checkInString <> "" And checkOutString <> "" Then
+                Dim checkInDate As DateTime = Convert.ToDateTime(checkInString)
+                Dim checkOutDate As DateTime = Convert.ToDateTime(checkOutString)
+                If DateTime.Compare(checkInDate, checkOutDate) < 0 Then
+                    checkInString = checkInDate.ToString("yyyy-MM-dd")
+                    checkOutString = checkOutDate.ToString("yyyy-MM-dd")
+                    condicionFechasDisponibilidad = " AND idAlojamiento NOT IN(SELECT idAlojamiento FROM reserva res WHERE (CAST(res.fechaEntrada AS DATE) BETWEEN CAST('" & checkInString & "' AS DATE) AND CAST('" & checkOutString & "' AS DATE)) OR (CAST(res.fechaSalida AS DATE)BETWEEN CAST('" & checkInString & "' AS DATE) AND CAST('" & checkOutString & "' AS DATE)))"
+                End If
+            End If
+
+            If busqueda <> "" Then
+                If tipoAloj = "ALOJAMIENTOS" Then
+                    condicionTipoAlojamiento = ""
+                End If
+                Dim sqlBusquedaPorNombre As String = "SELECT idAlojamiento,documentname,tourismemail,web,turismdescription,lodgingtype,loc.postalcode, loc.address, loc.municipality, loc.territory,loc.country " &
+                                               "FROM talojamientos aloj, tlocalizacion loc " &
+                                               "WHERE aloj.localizacion_idLocalizacion = loc.idLocalizacion AND (UPPER(documentname) LIKE '%" & busqueda & "%'" & condicionTipoAlojamiento &
+                                               " OR idAlojamiento IN(" &
+                                                    "SELECT idAlojamiento FROM talojamientos aloj WHERE aloj.localizacion_idLocalizacion IN(" &
+                                                        "SELECT DISTINCT loc.idLocalizacion FROM tlocalizacion loc " &
+                                                        "WHERE UPPER(territory) LIKE '%" & busqueda & "%' OR UPPER(country) LIKE '%" & busqueda & "%' OR UPPER(municipality) LIKE '%" & busqueda & "%')" &
+                                                    ")" & condicionTipoAlojamiento &
+                                               ")" & condicionFechasDisponibilidad &
+                                               orden
+                queryDA = New MySqlDataAdapter(sqlBusquedaPorNombre, conexion)
+            Else
+                If tipoAloj = "ALOJAMIENTOS" Then
+                    condicionTipoAlojamiento = ""
+                End If
+                Dim sqlBusquedaSinNombre As String = "SELECT idAlojamiento,documentname,tourismemail,web,turismdescription,lodgingtype,loc.postalcode, loc.address, loc.municipality, loc.territory,loc.country " &
+                                               "FROM talojamientos aloj, tlocalizacion loc " &
+                                               "WHERE aloj.localizacion_idLocalizacion = loc.idLocalizacion" &
+                                               condicionTipoAlojamiento & condicionFechasDisponibilidad &
+                                               orden
+                queryDA = New MySqlDataAdapter(sqlBusquedaSinNombre, conexion)
+            End If
+            Return queryDA
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        Return Nothing
+    End Function
+
     Public Function queryAlojamientoPorId(id As String) As Alojamiento
         Dim busqueda = UCase(Session("tbBusqueda"))
         Dim tipoAloj = UCase(Session("ddlTipoAloj"))

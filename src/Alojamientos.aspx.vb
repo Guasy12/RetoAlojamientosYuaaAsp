@@ -25,7 +25,7 @@ Public Class Alojamientos
     Protected Sub buscar()
         Try
             Dim query As New MySqlDataAdapter
-            query = metodos.queryBusqueda()
+            query = metodos.queryBusquedaOrdenada(ddlOrdenarAscDesc.SelectedItem.Text)
             Dim campoTexto As New DataTable()
             query.Fill(campoTexto)
             Dim numero As Integer = campoTexto.Rows.Count
@@ -68,5 +68,10 @@ Public Class Alojamientos
 
     Protected Sub logout_Click(sender As Object, e As EventArgs) Handles logout.Click
         metodos.logout()
+    End Sub
+
+    Protected Sub ddlOrdenarAscDesc_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlOrdenarAscDesc.SelectedIndexChanged
+        phInformacion.Controls.Clear()
+        buscar()
     End Sub
 End Class
